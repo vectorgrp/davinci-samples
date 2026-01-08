@@ -51,12 +51,14 @@ If using EcuC as Code:
 
 ## 📂 Repository Structure
 
-davinci-samples/
-├── bazel-starter/ # Bazel-based project setup example
-├── ready-set-go-scripts/ # Ready-to-use scripts for quick workflow setup
-├── LICENSE # License information
-├── README.md # Main documentation for the repository
-└── SECURITY.md # Security policy
+```text
+davinci-samples/  
+ ├─ bazel-starter/         # Bazel-based project setup example  
+ ├─ ready-set-go-scripts/  # Ready-to-use scripts for quick workflow setup  
+ ├─ LICENSE                # License information  
+ ├─ README.md              # Main documentation for the repository  
+ └─ SECURITY.md            # Security policy
+```
 
 ## 📖 Documentation
 
