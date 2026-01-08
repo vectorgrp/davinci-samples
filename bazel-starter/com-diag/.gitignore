@@ -1,8 +1,0 @@
-.idea/
-.gradle/
-build/
-bazel-*
-**/*.lock
-**/*.~lock
-**/*.sarif
-**/DVCfgAutomationInterfaceBswmdModel*
