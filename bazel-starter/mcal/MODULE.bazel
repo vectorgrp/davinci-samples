@@ -1,0 +1,42 @@
+###############################################################################
+# MODULE.bazel
+# Purpose: Bazel build rules for configuring ECUs using DaVinci Configurator Classic Version 6.
+# Author: Vector Informatik GmbH
+###############################################################################
+
+bazel_dep(name = "rules_ecu_config", version = "1.0.0")
+bazel_dep(name = "rules_cfg6", version = "1.0.0")
+
+ecu_config = use_extension("@rules_ecu_config//:ecu_config.bzl", "ecu_config")
+
+# DaVinci Configurator Classic Version 6 is used for ECU configuration.
+# Other versions of DaVinci Configurator Classic are supported as well.
+# To use a different version, update <cfg6_url> and <cfg6_sh256>.
+ecu_config.tools(
+    cfg6_sha256 = "1ff6d0d3e0256853633ed3a39cfc0b86841bf6fabe0aa4544c3cf29a384a3608",
+    cfg6_url = "https://packages.vehub.vector.com/nuget/flatcontainer/vector-davinci-configurator-classic-cli/6.2.1/vector-davinci-configurator-classic-cli.6.2.1.nupkg",
+)
+
+# Define a DaVinci Project.
+# For detailed instructions, see https://help.vector.com/davinci-configurator-classic/en/current.
+ecu_config.project(
+    # Specify the BSW package for the DaVinci project.
+    # Provide the folder path to your BSW package here.
+    bsw_pkg = "<BswPackage>",
+    # Provide the path to the (migrated from Version 5) DaVinci Project
+    dvjson = "<DaVinciProject.dvjson>",
+    # Provide the path to the module configuration files.
+    # See BUILD.bazel how Modules are replaced.
+    modules = [
+        "<ModuleA.arxml>",
+        "<ModuleB.arxml>",
+        "<MyReplacedModule>",
+    ],
+)
+
+# Import the DaVinci Project and associated tools.
+# Specify the DaVinci Project name.
+use_repo(ecu_config, "cfg6", "<DaVinciProject>")
+
+# Configure the required toolchains.
+register_toolchains("@cfg6//:toolchain")

@@ -1,0 +1,21 @@
+###############################################################################
+# BUILD.bazel
+# Purpose: Bazel build defines the build targets.
+# Author: Vector Informatik GmbH
+###############################################################################
+
+# DaVinci Configurator Classic rules.
+load(
+    "@rules_cfg6//:defs.bzl",
+    "replace_modules",
+)
+
+###############################################################################
+#                   ECU Configuration
+###############################################################################
+
+# Use this option to import modules in "replace mode".
+replace_modules(
+    name = "<ReplaceModule>",
+    arxmls = ["<Module.arxml>"],
+)

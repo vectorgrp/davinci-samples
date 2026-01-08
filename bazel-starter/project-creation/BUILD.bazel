@@ -1,0 +1,51 @@
+###############################################################################
+# BUILD.bazel
+# Purpose: Bazel build defines the build targets.
+# Author: Vector Informatik GmbH
+###############################################################################
+
+# DaVinci Configurator Classic rules.
+load(
+    "@rules_cfg6//:defs.bzl",
+    "merged_extract",
+    "replace_modules",
+    "system_extract",
+)
+
+###############################################################################
+#                   EcuExPro
+###############################################################################
+
+# Extract <ECUName> from the system description.
+# Use when working with legacy files or AUTOSAR descriptions.
+# Note: Bazel rule name may differ from the actual ECU name.
+system_extract(
+    name = "<MyExtract>",
+    ecu = "<ECUName>",
+    sysd = "<MySystemDescription.arxml>",
+)
+
+system_extract(
+    name = "<MyLegacyExtract>",
+    ecu = "<ECUName>",
+    sysd = "<MyNetwork.dbc>",
+)
+
+# Merge multiple .arxml files to generate an ECU extract.
+merged_extract(
+    name = "<MyMergedExtract>",
+    srcs = [
+        "<MyExtract>",
+        "<MyLegacyExtract>",
+    ],
+)
+
+###############################################################################
+#                   ECU Configuration
+###############################################################################
+
+# Use this option to import modules in 'replace mode'.
+replace_modules(
+    name = "<MyReplacedModule>",
+    arxmls = ["<Module.arxml>"],
+)
