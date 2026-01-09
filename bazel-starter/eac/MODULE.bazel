@@ -13,10 +13,15 @@ ecu_config = use_extension("@rules_ecu_config//:ecu_config.bzl", "ecu_config")
 # Other versions of these tools are supported as well.
 # To use a different version, update <cfg6_url>, <dvarjson_url>, <dvarjson_sh256> and <cfg6_sh256>.
 ecu_config.tools(
-    cfg6_sha256 = "1ff6d0d3e0256853633ed3a39cfc0b86841bf6fabe0aa4544c3cf29a384a3608",
-    cfg6_url = "https://packages.vehub.vector.com/nuget/flatcontainer/vector-davinci-configurator-classic-cli/6.2.1/vector-davinci-configurator-classic-cli.6.2.1.nupkg",
-    dvarjson_sha256 = "e0f86cda336baf3c8bcbf39bd458e429153efcd384d388915fcee2a10605c076",
-    dvarjson_url = "https://packages.vehub.vector.com/nuget/flatcontainer/vector-dvarjson/1.1.0/vector-dvarjson.1.1.0.nupkg",
+    cfg6_sha256 = "1D676D52E4A649AFA78D8C9482730E66A94472241D54D3ADBC0F82BB25E77E82",
+    cfg6_url = "https://packages.vehub.vector.com/apt/pool/generic/vector-davinci-configurator-classic/6.2.1/vector-davinci-configurator-classic-6.2.1.deb",
+    dvarjson_sha256 = "38D3E30EF6092C31D2F0E37747130684DFC77C4E8E94850D0FEA326BF8B7706F",
+    dvarjson_url = "https://packages.vehub.vector.com/apt/pool/generic/vector-davinci-autosar-json/1.1.0/vector-dvarjson-1.1.0-amd64.deb",
+    # For Windows use:
+    # cfg6_sha256 = "1FF6D0D3E0256853633ED3A39CFC0B86841BF6FABE0AA4544C3CF29A384A3608",
+    # cfg6_url = "https://packages.vehub.vector.com/nuget/flatcontainer/vector-davinci-configurator-classic-cli/6.2.1/vector-davinci-configurator-classic-cli.6.2.1.nupkg",
+    # dvarjson_sha256 = "E0F86CDA336BAF3C8BCBF39BD458E429153EFCD384D388915FCEE2A10605C076",
+    # dvarjson_url = "https://packages.vehub.vector.com/nuget/flatcontainer/vector-dvarjson/1.1.0/vector-dvarjson.1.1.0.nupkg",
 )
 
 # Define a DaVinci Project.
