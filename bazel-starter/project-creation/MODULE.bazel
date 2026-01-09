@@ -15,7 +15,7 @@ ecu_config = use_extension("@rules_ecu_config//:ecu_config.bzl", "ecu_config")
 ecu_config.tools(
     cfg6_sha256 = "1ff6d0d3e0256853633ed3a39cfc0b86841bf6fabe0aa4544c3cf29a384a3608",
     cfg6_url = "https://packages.vehub.vector.com/nuget/flatcontainer/vector-davinci-configurator-classic-cli/6.2.1/vector-davinci-configurator-classic-cli.6.2.1.nupkg",
-    dvarjson_sha256 = "",
+    dvarjson_sha256 = "e0f86cda336baf3c8bcbf39bd458e429153efcd384d388915fcee2a10605c076",
     dvarjson_url = "https://packages.vehub.vector.com/nuget/flatcontainer/vector-dvarjson/1.1.0/vector-dvarjson.1.1.0.nupkg",
 )
 
@@ -36,7 +36,6 @@ ecu_config.project(
     diag_modules = [
         "<LegacyDiagnosticDataDefinitionFile.json>",
         "<DiagnosticModuleConfiguration.arxml>",
-        "<MyLegacyExtract>",
     ],
     # Provide the path to the ECU System Extract files.
     extract = [
@@ -57,5 +56,4 @@ use_repo(ecu_config, "cfg6", "dvarjson", "<DaVinciProject>")
 
 # Configure the required toolchains.
 register_toolchains("@cfg6//:toolchain")
-
 register_toolchains("@dvarjson//:toolchain")
