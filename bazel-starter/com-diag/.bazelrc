@@ -1,6 +1,6 @@
 # Configure Bazel to trust a self-signed SSL certificate.
 # This ensures that Bazel uses the specified truststore for SSL connections.
-# startup --host_jvm_args=-Djavax.net.ssl.trustStore='D:/dev/.gradle/truststore'
+# startup --host_jvm_args=-Djavax.net.ssl.trustStore='<truststore>'
 build --java_runtime_version=remotejdk_21
 
 build --action_env=LOCALAPPDATA
