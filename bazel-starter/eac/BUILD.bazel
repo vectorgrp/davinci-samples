@@ -4,7 +4,7 @@
 # Author: Vector Informatik GmbH
 ###############################################################################
 
-# DaVinci Configurator Classic rules.
+# Rules for preparing project input files.
 load(
     "@rules_cfg6//:defs.bzl",
     "eac_jar",
@@ -13,42 +13,26 @@ load(
     "system_extract",
 )
 
-# Project specific EaC rules.
-load("@<DaVinciProject>//:defs.bzl", "eac_jar")
+# Project specific rules.
+load("@<DaVinciProject>//:defs.bzl", "eac_jar", "generate")
 
-###############################################################################
-#                   EcuExPro
-###############################################################################
-
-# Extract <ECUName> from the system description.
-# Use when working with legacy files or AUTOSAR descriptions.
-# Note: Bazel rule name may differ from the actual ECU name.
+# Extract an ECU from a system description.
 system_extract(
     name = "<MyExtract>",
-    ecu = "<ECUName>",
+    ecu = "<EcuName>",
     sysd = "<MySystemDescription.arxml>",
 )
 
-system_extract(
-    name = "<MyLegacyExtract>",
-    ecu = "<ECUName>",
-    sysd = "<MyNetwork.dbc>",
-)
-
-# Merge multiple .arxml files to generate an ECU extract.
+# Merge multiple .arxml files into an ECU extract.
 merged_extract(
     name = "<MyMergedExtract>",
     srcs = [
         "<MyExtract>",
-        "<MyLegacyExtract>",
+        "<File.arxml>",
     ],
 )
 
-###############################################################################
-#                   ECU Configuration
-###############################################################################
-
-# Use this option to import modules in 'replace mode'.
+# Use this rule to import modules in 'replace mode'.
 replace_modules(
     name = "<MyReplacedModule>",
     arxmls = ["<Module.arxml>"],
@@ -66,4 +50,17 @@ eac_jar(
     name = "<MySecondEAC>",
     srcs = ["src/MySecondEAC.java"],
     allow_beta_api = True,
+)
+
+# Use this rule to generate the code.
+generate(
+    # Restrict the module to generate code for using the optional modules and/or excluded attributes.
+    modules = [],
+    excluded = [],
+    # Specify the external generation steps to execute using the optional ext_steps attribute.
+    ext_steps = [],
+    type = "REAL", # "REAL" or "VTT"
+    # Optional attributes defaulting to the values shown below.
+    keep_tmp_files = False,
+    skip_up_to_date_checks = False,
 )

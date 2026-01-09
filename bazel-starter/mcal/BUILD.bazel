@@ -4,18 +4,30 @@
 # Author: Vector Informatik GmbH
 ###############################################################################
 
-# DaVinci Configurator Classic rules.
+# Rules for preparing project input files.
 load(
     "@rules_cfg6//:defs.bzl",
     "replace_modules",
 )
 
-###############################################################################
-#                   ECU Configuration
-###############################################################################
+# Project specific rules.
+load("@<DaVinciProject>//:defs.bzl", "generate")
 
-# Use this option to import modules in "replace mode".
+# Use this rule to import modules in "replace mode".
 replace_modules(
     name = "<ReplaceModule>",
     arxmls = ["<Module.arxml>"],
+)
+
+# Use this rule to generate the code.
+generate(
+    # Restrict the module to generate code for using the optional modules and/or excluded attributes.
+    modules = [],
+    excluded = [],
+    # Specify the external generation steps to execute using the optional ext_steps attribute.
+    ext_steps = [],
+    type = "REAL", # "REAL" or "VTT"
+    # Optional attributes defaulting to the values shown below.
+    keep_tmp_files = False,
+    skip_up_to_date_checks = False,
 )

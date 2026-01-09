@@ -57,7 +57,8 @@ ecu_config.project(
 )
 
 # Import the DaVinci Project and associated tools.
-# Specify the DaVinci Project name.
+# Specify the DaVinci Project name (i.e. the name given in the project creation file).
+# Run 'bazel run @<DaVinciProject>//:open_configurator' to view the project in DaVinci Configurator Classic Version 6.
 use_repo(ecu_config, "cfg6", "dvarjson", "<DaVinciProject>")
 
 # Configure the required toolchains.
