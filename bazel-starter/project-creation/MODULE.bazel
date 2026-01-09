@@ -4,7 +4,8 @@
 # Author: Vector Informatik GmbH
 ###############################################################################
 
-bazel_dep(name = "rules_ecu_config", version = "1.0.0")
+bazel_dep(name = "rules_ecu_config", version = "1.0.1")
+bazel_dep(name = "rules_cfg6", version = "1.0.0")
 
 ecu_config = use_extension("@rules_ecu_config//:ecu_config.bzl", "ecu_config")
 
