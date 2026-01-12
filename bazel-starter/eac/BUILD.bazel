@@ -5,62 +5,63 @@
 ###############################################################################
 
 # Rules for preparing project input files.
-load(
-    "@rules_cfg6//:defs.bzl",
-    "eac_jar",
-    "merged_extract",
-    "replace_modules",
-    "system_extract",
-)
+load("@rules_cfg6//:defs.bzl", "as_code_eac", "merged_extract", "replace_modules", "system_extract")
 
 # Project specific rules.
-load("@<DaVinciProject>//:defs.bzl", "eac_jar", "generate")
+load("@eac//:defs.bzl", "eac_jar", "generate")
+
+exports_files(["cfg6-project/eac.dvjson"])
 
 # Extract an ECU from a system description.
-system_extract(
-    name = "<MyExtract>",
-    ecu = "<EcuName>",
-    sysd = "<MySystemDescription.arxml>",
-)
+# system_extract(
+#     name = "<MyExtract>",
+#     ecu = "<EcuName>",
+#     sysd = "<MySystemDescription.arxml>",
+# )
 
 # Merge multiple .arxml files into an ECU extract.
-merged_extract(
-    name = "<MyMergedExtract>",
-    srcs = [
-        "<MyExtract>",
-        "<File.arxml>",
-    ],
-)
+# merged_extract(
+#     name = "<MyMergedExtract>",
+#     srcs = [
+#         "<MyExtract>",
+#         "<File.arxml>",
+#     ],
+# )
 
-# Use this rule to import modules in 'replace mode'.
-replace_modules(
-    name = "<MyReplacedModule>",
-    arxmls = ["<Module.arxml>"],
-)
+# Import modules in 'replace mode'.
+# replace_modules(
+#     name = "<MyReplacedModule>",
+#     arxmls = ["<Module.arxml>"],
+# )
 
-# EaC code ready to be used in project.
+# EaC Java targets.
 eac_jar(
-    name = "<MyFirstEAC>",
-    srcs = ["src/MyFirstEAC.java"],
+    name = "MyFirstEac",
+    srcs = ["src/MyFirstEac.java"],
+    allow_beta_api = True,
+)
+eac_jar(
+    name = "MySecondEac",
+    srcs = ["src/MySecondEac.java"],
     allow_beta_api = True,
 )
 
-# EaC code ready to be used in project.
-eac_jar(
-    name = "<MySecondEAC>",
-    srcs = ["src/MySecondEAC.java"],
-    allow_beta_api = True,
-)
+# Use pre-built EaC jars.
+# as_code_eac(
+#     name = "<MyPreBuiltEac>",
+#     jar = "<MyPreBuiltEac.jar>",
+# )
 
-# Use this rule to generate the code.
+# Generate the code.
 generate(
-    # Restrict the module to generate code for using the optional modules and/or excluded attributes.
+    name = "code",
+    # Restrict the modules to generate code for using the optional modules and/or excluded attributes.
     modules = [],
     excluded = [],
     # Specify the external generation steps to execute using the optional ext_steps attribute.
     ext_steps = [],
     type = "REAL", # "REAL" or "VTT"
-    # Optional attributes defaulting to the values shown below.
+    # Additional optional attributes defaulting to the values shown below.
     keep_tmp_files = False,
     skip_up_to_date_checks = False,
 )

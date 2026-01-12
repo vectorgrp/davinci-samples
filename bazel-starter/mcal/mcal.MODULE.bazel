@@ -1,0 +1,25 @@
+###############################################################################
+# mcal.MODULE.bazel
+# Purpose: DaVinci Configurator Classic Version 6 project definition
+# Author: Vector Informatik GmbH
+###############################################################################
+
+# For details on DaVinci Configurator Classic Version 6 see https://help.vector.com/davinci-configurator-classic/en/current.
+ecu_config = use_extension("@rules_ecu_config//:ecu_config.bzl", "ecu_config")
+ecu_config.project(
+    bsw_pkg = "@bsw_package//:folder",
+    dvjson = "//bazel-starter/mcal:cfg6-project/mcal.dvjson",
+    # Optionally provide diagnostic descriptions (for CDD support see https://marketplace.visualstudio.com/items?itemName=VectorGroup.dvarjson).
+    # diag_modules = [
+    #     "<LegacyDiagnosticDataDefinitionFile.json>",
+    #     "<DiagnosticModuleConfiguration.arxml>",
+    # ],
+    # Optionally provide module configurations (see BUILD.bazel on how to import in 'replace mode').
+    # modules = [
+    #     "<ModuleA.arxml>",
+    #     "<ModuleB.arxml>",
+    #     "<MyReplacedModule>",
+    # ],
+)
+# The name of the project repo is defined by the referenced .dvjson file.
+use_repo(ecu_config, "mcal")

@@ -1,0 +1,8 @@
+{
+  "general": "Settings/General.json",
+  "$schema": "./Output/Schema/Master.settings.schema.json",
+  "arxmlProjectContent": "Settings/ArxmlProjectContent.json",
+  "ifp": "Settings/Ifp.json",
+  "misc": "Settings/Misc.json",
+  "generator": "Settings/Generator.json"
+}

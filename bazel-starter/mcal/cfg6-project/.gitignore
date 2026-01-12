@@ -1,0 +1,11 @@
+#Ignore the following directories
+
+Output/Source/
+
+Output/Config/EaC/
+
+Output/Log/
+
+Output/Trace/
+
+Output/Schema/

@@ -5,29 +5,29 @@
 ###############################################################################
 
 # Rules for preparing project input files.
-load(
-    "@rules_cfg6//:defs.bzl",
-    "replace_modules",
-)
+load("@rules_cfg6//:defs.bzl", "replace_modules")
 
 # Project specific rules.
-load("@<DaVinciProject>//:defs.bzl", "generate")
+load("@MyProject//:defs.bzl", "generate")
 
-# Use this rule to import modules in "replace mode".
-replace_modules(
-    name = "<ReplaceModule>",
-    arxmls = ["<Module.arxml>"],
-)
+exports_files(["cfg6-project/mcal.dvjson"])
 
-# Use this rule to generate the code.
+# Import modules in 'replace mode'.
+# replace_modules(
+#     name = "<MyReplacedModule>",
+#     arxmls = ["<Module.arxml>"],
+# )
+
+# Generate the code.
 generate(
-    # Restrict the module to generate code for using the optional modules and/or excluded attributes.
+    name = "code",
+    # Restrict the modules to generate code for using the optional modules and/or excluded attributes.
     modules = [],
     excluded = [],
     # Specify the external generation steps to execute using the optional ext_steps attribute.
     ext_steps = [],
     type = "REAL", # "REAL" or "VTT"
-    # Optional attributes defaulting to the values shown below.
+    # Additional optional attributes defaulting to the values shown below.
     keep_tmp_files = False,
     skip_up_to_date_checks = False,
 )

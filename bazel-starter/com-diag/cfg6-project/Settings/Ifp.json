@@ -1,0 +1,9 @@
+{
+  "$schema": "../Output/Schema/Ifp.settings.schema.json",
+  "moduleDefinitionMappings": [],
+  "derivation": {
+    "ldCom": {
+      "derivationVersion": "NONE"
+    }
+  }
+}

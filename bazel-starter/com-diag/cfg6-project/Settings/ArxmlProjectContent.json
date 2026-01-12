@@ -1,0 +1,54 @@
+{
+  "$schema": "../Output/Schema/ArxmlProjectContent.settings.schema.json",
+  "content": {
+    "softwareComponents": {
+      "location": {
+        "dir": "../Output/Config/SoftwareComponents"
+      }
+    },
+    "appComponents": {
+      "location": {
+        "dirList": [
+          "../Config/AppComponents"
+        ]
+      }
+    },
+    "definitionRestriction": {
+      "location": {
+        "dir": "../Config/DefinitionRestriction"
+      }
+    },
+    "ecuc": {
+      "activeEcuc": {
+        "file": "../Config/EcuConfig/ComDiag.ecuc.arxml"
+      }
+    },
+    "ifp": {
+      "ecuc": {
+        "file": "../Output/Config/EcuConfig/ComDiag_IFP.arxml"
+      }
+    },
+    "internalBehavior": {
+      "location": {
+        "dir": "../Output/Config/InternalBehavior"
+      }
+    },
+    "platformTypes": {
+      "location": {
+        "dir": "../Config/AUTOSAR"
+      }
+    },
+    "structuredExtract": {
+      "internal": {
+        "dir": "../Config/StructuredExtract/BswConfig"
+      }
+    },
+    "timingExtensions": {
+      "location": {
+        "dirList": [
+          "../Config/TimingExtensions"
+        ]
+      }
+    }
+  }
+}

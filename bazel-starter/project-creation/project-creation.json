@@ -1,0 +1,31 @@
+{
+  "compatibilityVersion": "1",
+  "general": {
+    "name": "MyProject",
+    "projectFolder": ".",
+    "version": "1.0",
+    "author": ""
+  },
+  "ecucSplitter": {
+    "separateFiles": true,
+    "ownFolderForEachSplitter": false,
+    "ownFileForEachInstance": false
+  },
+  "environment": {
+    "derivative": "",
+    "compiler": "",
+    "pinLayout": "",
+    "projectType": {
+      "type": "Standard",
+      "domain": "SystemExtractProject"
+    },
+    "targetType": "REAL",
+    "useCases": {},
+    "postBuildLoadableSupport": false,
+    "postBuildSelectableSupport": false,
+    "syncJobRole": "None"
+  },
+  "ifp": {
+    "ldComDerivationVersion": "NONE"
+  }
+}

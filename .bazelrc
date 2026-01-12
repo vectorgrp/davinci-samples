@@ -1,6 +1,6 @@
-# Configure Bazel to trust a self-signed SSL certificate.
-# This ensures that Bazel uses the specified truststore for SSL connections.
-# startup --host_jvm_args=-Djavax.net.ssl.trustStore='<truststore>'
+# Configure Bazel to trust any self-signed SSL certificates.
+startup --host_jvm_args=-Djavax.net.ssl.trustStore='D:/dev/.gradle/truststore'
+
 build --java_runtime_version=remotejdk_21
 
 build --action_env=LOCALAPPDATA
@@ -9,5 +9,6 @@ build --action_env=TEMP
 build --action_env=TMP
 build --action_env=USERPROFILE
 
+# Configure bazel to use Vector's and Bazel Central Registry for fetching external dependencies.
 common --registry=https://raw.githubusercontent.com/vectorgrp/bazel-registry/main
 common --registry=https://bcr.bazel.build

@@ -11,13 +11,13 @@
 
 ## 🧩 Bazel Starter Options
 
-- **com-diag** bazel starter demonstrates the steps required to import and update communication, diagnostic, and other description files for an existing DaVinci Project.
+- **com-diag** bazel starter showing the steps required to import and update communication, diagnostic, and other description files for an existing DaVinci Project.
 
 - **eac** bazel starter to implement the EcuC-as-Code workflow for ECU configuration in DaVinci Projects.
 
 - **mcal** bazel starter provides an example setup for DaVinci Projects without predefined input data.
 
-- **project-creation** bazel starter demonstrates how to create a new DaVinci Project using a configuration file.
+- **project-creation** bazel starter showing how to create a new DaVinci Project using a configuration file.
 
 ## 🚀 Getting Started
 

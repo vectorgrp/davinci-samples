@@ -2,7 +2,7 @@ package com.company.eac;
 
 import com.vector.cfg.cac.EaC;
 
-public class MyFirstEAC {
+public class MyFirstEac {
 
     @EaC
     public static void myCode() {
