@@ -6,57 +6,56 @@ Welcome to **DaVinci Samples**, an open-source repository designed to help devel
 
 This repository provides sample resources to help you integrate DaVinci Configurator Classic workflows:
 
-- **Ready-Set-Go-Scripts** demonstrating how DaVinci Configurator Classic integrates into typical MICROSAR projects.
+-   **Ready-Set-Go-Scripts** demonstrating how DaVinci Configurator Classic integrates into typical MICROSAR projects.
 
-  - Migrate projects from DaVinci Configurator Classic Version 5 to Version 6
-  - Create a new DaVinci Project and link additional workspaces
-  - Project Import and Update
+    -   Create a new DaVinci Project and link additional workspaces
+    -   Project Import and Update
 
-- **Bazel Starter** shows how to build and automate configurations using Bazel and modern build systems. You can leverage various Bazel rules depending on your build needs:
+-   **Bazel Starter** shows how to build and automate configurations using Bazel and modern build systems. You can leverage various Bazel rules depending on your build needs:
 
-  - Create a new DaVinci Project or reuse an existing one
-  - Execute EcuC-as-Code
-  - Project Import and Update
-  - Validate and generate the DaVinci Project
+    -   Create a new DaVinci Project or reuse an existing one
+    -   Execute EcuC-as-Code
+    -   Project Import and Update
+    -   Validate and generate the DaVinci Project
 
 ## 🛠 Requirements
 
 Always required:
 
-- DaVinci Configurator Classic Version 6
-- A valid MICROSAR package
+-   DaVinci Configurator Classic Version 6
+-   A valid MICROSAR package
 
 If using scripts:
 
-- DaVinci Developer Classic (Release 4.17 SP2 or newer)
-- DaVinci Team (Release 6.2 or newer)
+-   DaVinci Developer Classic (Release 4.17 SP2 or newer)
+-   DaVinci Team (Release 6.2 or newer)
 
 If using pipelines (if using Bazel):
 
-- Bazel by Google
+-   Bazel by Google
 
 If using EcuC as Code:
 
-- EcuC-As-Code Development Kit
+-   EcuC-As-Code Development Kit
 
 ## 🚀 Getting Started
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/vectorgrp/davinci-samples.git
-   ```
+    ```bash
+    git clone https://github.com/vectorgrp/davinci-samples.git
+    ```
 2. Explore the samples:
-   - Navigate to the folder that matches your use case.
+    - Navigate to the folder that matches your use case.
 3. Follow the instructions in each folder’s README to get started.
 
 ## 📂 Repository Structure
 
 ```text
-davinci-samples/  
- ├─ bazel-starter/         # Bazel-based project setup example  
- ├─ ready-set-go-scripts/  # Ready-to-use scripts for quick workflow setup  
- ├─ LICENSE                # License information  
- ├─ README.md              # Main documentation for the repository  
+davinci-samples/
+ ├─ bazel-starter/         # Bazel-based project setup example
+ ├─ ready-set-go-scripts/  # Ready-to-use scripts for quick workflow setup
+ ├─ LICENSE                # License information
+ ├─ README.md              # Main documentation for the repository
  └─ SECURITY.md            # Security policy
 ```
 
