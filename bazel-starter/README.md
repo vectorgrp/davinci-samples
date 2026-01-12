@@ -22,5 +22,6 @@
 ## 🚀 Getting Started
 
 1. Select a Bazel starter that matches your use case.
-2. Replace all placeholders (e.g., `<MyECU.arxml>`) in `MODULE.bazel` and `BUILD.bazel` with your actual file names.
-3. Run the Bazel build commands in your development environment or IDE to execute the selected starter workflow.
+2. Configure the path to your `<BswPackage>` in [MODULE.bazel](../MODULE.bazel).
+3. Adjust the Bazel starter project to your specific requirements. See the comments in the Bazel files for some hints.
+4. Run the Bazel build commands in your development environment or IDE to execute the selected starter workflow.

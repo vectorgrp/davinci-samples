@@ -495,7 +495,7 @@
     "@@rules_ecu_config+//:ecu_config.bzl%ecu_config": {
       "general": {
         "bzlTransitiveDigest": "DRhZiyEvI6/wNU8FkVOXeY8qkdM00UMt+5nIwSFcNNU=",
-        "usagesDigest": "lXQukQjFtmPar8aY6DiN2xxEh6i6903yhuGQv4eNSQQ=",
+        "usagesDigest": "vi1haxMdr1TADKYfqGs0s8D6etVRFZpBTpk5DAbHgZM=",
         "recordedFileInputs": {
           "@@//bazel-starter/project-creation/project-creation.json": "31954d185722bc196832e4f124d866fec4f086d24435855f213fcc0b8d8bf5e5"
         },
@@ -505,15 +505,15 @@
           "cfg6": {
             "repoRuleId": "@@rules_cfg6+//:rules.bzl%cfg6_archive",
             "attributes": {
-              "url": "https://packages.vehub.vector.com/nuget/flatcontainer/vector-davinci-configurator-classic-cli/6.2.1/vector-davinci-configurator-classic-cli.6.2.1.nupkg",
-              "sha256": "1FF6D0D3E0256853633ED3A39CFC0B86841BF6FABE0AA4544C3CF29A384A3608"
+              "url": "https://packages.vehub.vector.com/apt/pool/generic/vector-davinci-configurator-classic/6.2.1/vector-davinci-configurator-classic-6.2.1.deb",
+              "sha256": "1D676D52E4A649AFA78D8C9482730E66A94472241D54D3ADBC0F82BB25E77E82"
             }
           },
           "dvarjson": {
             "repoRuleId": "@@rules_dvarjson+//:rules.bzl%dvarjson_archive",
             "attributes": {
-              "url": "https://packages.vehub.vector.com/nuget/flatcontainer/vector-dvarjson/1.1.0/vector-dvarjson.1.1.0.nupkg",
-              "sha256": "E0F86CDA336BAF3C8BCBF39BD458E429153EFCD384D388915FCEE2A10605C076"
+              "url": "https://packages.vehub.vector.com/apt/pool/generic/vector-davinci-autosar-json/1.1.0/vector-dvarjson-1.1.0-amd64.deb",
+              "sha256": "38D3E30EF6092C31D2F0E37747130684DFC77C4E8E94850D0FEA326BF8B7706F"
             }
           },
           "ComDiag": {
