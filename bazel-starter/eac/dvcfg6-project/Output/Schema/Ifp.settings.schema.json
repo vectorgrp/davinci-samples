@@ -1,0 +1,99 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "title": "Schema for IFP related project configuration entries",
+    "description": "Schema for IFP related project configuration entries: derivation, comControllerMappings and moduleDefinitionMappings. This schema is for the file referenced by the key ifp(Ifp.json).",
+    "properties": {
+        "derivation": {
+            "description": "Contains derivation-related configurations",
+            "type": "object",
+            "properties": {
+                "ldCom": {
+                    "description": "Setting for LdCom",
+                    "type": "object",
+                    "properties": {
+                        "derivationVersion": {
+                            "description": "Derivation Version",
+                            "type": "string",
+                            "enum": [
+                                "AR_4_4",
+                                "AR_R19_11",
+                                "NONE"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "derivationVersion"
+                    ]
+                },
+                "comM": {
+                    "description": "Setting for ComM",
+                    "type": "object",
+                    "properties": {
+                        "pncIdCountingMode": {
+                            "description": "PNC ID Counting Mode",
+                            "type": "string",
+                            "enum": [
+                                "NM_MESSAGE",
+                                "PNC_VECTOR"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "pncIdCountingMode"
+                    ]
+                }
+            }
+        },
+        "comControllerMappings": {
+            "description": "ComController mappings",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/comControllerMapping"
+            }
+        },
+        "moduleDefinitionMappings": {
+            "description": "Module definition mappings",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/moduleDefinitionMapping"
+            }
+        }
+    },
+    "$defs": {
+        "comControllerMapping": {
+            "type": "object",
+            "properties": {
+                "clusterPath": {
+                    "type": "string",
+                    "description": "Unique cluster path."
+                },
+                "moduleDefinitionPath": {
+                    "type": "string",
+                    "description": "AUTOSAR path to the module definition."
+                }
+            },
+            "required": [
+                "clusterPath",
+                "moduleDefinitionPath"
+            ]
+        },
+        "moduleDefinitionMapping": {
+            "type": "object",
+            "properties": {
+                "moduleConfigName": {
+                    "type": "string",
+                    "description": "Unique name of the module."
+                },
+                "moduleDefinitionPath": {
+                    "type": "string",
+                    "description": "AUTOSAR path to the module definition."
+                }
+            },
+            "required": [
+                "moduleConfigName",
+                "moduleDefinitionPath"
+            ]
+        }
+    }
+}

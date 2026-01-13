@@ -1,0 +1,269 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "description": "Schema for the ARXML project content definition.",
+    "properties": {
+        "fileCompatibilityVersion": {
+            "type": "string",
+            "description": "File compatibility version."
+        },
+        "content": {
+            "type": "object",
+            "description": "Root object for the different kinds of model contents. Relative file path are considered relative to the location of this configuration file.",
+            "properties": {
+                "appComponents": {
+                    "type": "object",
+                    "description": "Folders for the description files of the application components.",
+                    "properties": {
+                        "location": {
+                            "$ref": "#/$defs/dirList"
+                        }
+                    },
+                    "required": [
+                        "location"
+                    ]
+                },
+                "bswmd": {
+                    "type": "object",
+                    "description": "BSWMD configuration.",
+                    "properties": {
+                        "addBswmd": {
+                            "description": "Location of additional BSW packages.",
+                            "$ref": "#/$defs/dirList"
+                        },
+                        "bswmdLocation": {
+                            "description": "Location of the BSW package.",
+                            "$ref": "#/$defs/dir"
+                        }
+                    },
+                    "required": [
+                        "bswmdLocation"
+                    ]
+                },
+                "definitionRestriction": {
+                    "type": "object",
+                    "description": "Definition Restriction configuration.",
+                    "properties": {
+                        "location": {
+                            "$ref": "#/$defs/dir"
+                        }
+                    },
+                    "required": [
+                        "location"
+                    ]
+                },
+                "ecuc": {
+                    "type": "object",
+                    "description": "Ecuc configuration.",
+                    "properties": {
+                        "activeEcuc": {
+                            "description": "Active Ecuc configuration.",
+                            "$ref": "#/$defs/file"
+                        },
+                        "external": {
+                            "description": "Include mechanism for 'external' ECU configuration files from other projects that are treated as 'read-only'.",
+                            "$ref": "#/$defs/fileList"
+                        },
+                        "recommendedUserEcuc": {
+                            "description": "Recommended user authored EcuC file.",
+                            "$ref": "#/$defs/file"
+                        },
+                        "splitters": {
+                            "description": "Ecuc splitter configuration.",
+                            "$ref": "#/$defs/fileList"
+                        }
+                    },
+                    "required": [
+                        "activeEcuc"
+                    ]
+                },
+                "flat": {
+                    "type": "object",
+                    "description": "FlatMap and FlatExtract configuration (on an interim basis).",
+                    "properties": {
+                        "flatExtract": {
+                            "description": "FlatExtract configuration.",
+                            "$ref": "#/$defs/file"
+                        },
+                        "flatMap": {
+                            "description": "FlatMap configuration.",
+                            "$ref": "#/$defs/file"
+                        }
+                    }
+                },
+                "ifp": {
+                    "type": "object",
+                    "description": "IFP files configuration.",
+                    "properties": {
+                        "ecuc": {
+                            "description": "Initial ECUC configuration.",
+                            "$ref": "#/$defs/file"
+                        },
+                        "recommendedIfpEcuc": {
+                            "description": "Recommended IFP EcuC file.",
+                            "$ref": "#/$defs/file"
+                        },
+                        "diagnosticEcuc": {
+                            "description": "Diagnostics EcuC file.",
+                            "$ref": "#/$defs/file"
+                        },
+                        "recommendedDiagnosticEcuc": {
+                            "description": "Recommended diagnostics EcuC file.",
+                            "$ref": "#/$defs/file"
+                        },
+                        "harmonizedExtract": {
+                            "description": "ECU Extract configuration.",
+                            "$ref": "#/$defs/fileList"
+                        }
+                    }
+                },
+                "internalBehavior": {
+                    "type": "object",
+                    "description": "Folder for the description files of the internal behavior.",
+                    "properties": {
+                        "location": {
+                            "$ref": "#/$defs/dir"
+                        }
+                    },
+                    "required": [
+                        "location"
+                    ]
+                },
+                "platformTypes": {
+                    "type": "object",
+                    "description": "Folder for standard AUTOSAR files, e.g. platform types.",
+                    "properties": {
+                        "location": {
+                            "$ref": "#/$defs/dir"
+                        }
+                    },
+                    "required": [
+                        "location"
+                    ]
+                },
+                "softwareComponents": {
+                    "type": "object",
+                    "description": "Folder for the description files of the service components (SWC).",
+                    "properties": {
+                        "location": {
+                            "$ref": "#/$defs/dir"
+                        }
+                    },
+                    "required": [
+                        "location"
+                    ]
+                },
+                "structuredExtract": {
+                    "type": "object",
+                    "description": "Structured Extract configuration.",
+                    "properties": {
+                        "external": {
+                            "description": "External from CFG6 point of view, readonly for CFG6, writeable for DvDeveloper",
+                            "$ref": "#/$defs/dir"
+                        },
+                        "internal": {
+                            "description": "Internal from CFG6 point of view, writeable for CFG6, readonly for DvDeveloper",
+                            "$ref": "#/$defs/dir"
+                        }
+                    },
+                    "required": [
+                        "internal"
+                    ]
+                },
+                "timingExtensions": {
+                    "type": "object",
+                    "description": "Timing extensions configuration.",
+                    "properties": {
+                        "location": {
+                            "$ref": "#/$defs/dirList"
+                        }
+                    },
+                    "required": [
+                        "location"
+                    ]
+                },
+                "variance": {
+                    "type": "object",
+                    "description": "Variance configuration.",
+                    "properties": {
+                        "location": {
+                            "$ref": "#/$defs/file"
+                        }
+                    },
+                    "required": [
+                        "location"
+                    ]
+                }
+            },
+            "required": [
+                "bswmd",
+                "ecuc",
+                "softwareComponents"
+            ]
+        }
+    },
+    "required": [
+        "fileCompatibilityVersion",
+        "content"
+    ],
+    "$defs": {
+        "file": {
+            "type": "object",
+            "description": "A file path.",
+            "properties": {
+                "file": {
+                    "type": "string",
+                    "description": "Path to the file."
+                }
+            },
+            "required": [
+                "file"
+            ]
+        },
+        "dir": {
+            "type": "object",
+            "description": "A directory path.",
+            "properties": {
+                "dir": {
+                    "type": "string",
+                    "description": "Path to the directory."
+                }
+            },
+            "required": [
+                "dir"
+            ]
+        },
+        "fileList": {
+            "type": "object",
+            "description": "A list of file paths.",
+            "properties": {
+                "fileList": {
+                    "type": "array",
+                    "description": "Array of file paths.",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "fileList"
+            ]
+        },
+        "dirList": {
+            "type": "object",
+            "description": "List of directory paths.",
+            "properties": {
+                "dirList": {
+                    "type": "array",
+                    "items": {
+                        "description": "Directory paths.",
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "dirList"
+            ]
+        }
+    }
+}

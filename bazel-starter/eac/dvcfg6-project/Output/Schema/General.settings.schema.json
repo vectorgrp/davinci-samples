@@ -1,0 +1,471 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schema for general project configuration entries",
+  "description": "Schema for general project configuration entries. This schema is for the file referenced by the key general(General.json).",
+  "type": "object",
+  "properties": {
+    "author": {
+      "type": "string",
+      "description": "The author of the project"
+    },
+    "ecuc": {
+      "type": "object",
+      "description": "ECUC configuration.",
+      "properties": {
+        "activeModelRootPackage": {
+          "type": "string",
+          "description": "AUTOSAR path to the active ecuc root package."
+        }
+      },
+      "required": [
+        "activeModelRootPackage"
+      ]
+    },
+    "ecucSplitter": {
+      "type": "object",
+      "description": "ECUC Splitter configuration.",
+      "properties": {
+        "manualMapping": {
+          "type": "object",
+          "description": "When the manual mapping is active, the OwnFolderForEachSplitter and OwnFileForEachInstance switches are ignored and the module configurations are mapped as specified in the default mapping file or the user is asked for the location.",
+          "properties": {
+            "defaultMappingDescription": {
+              "type": "string",
+              "description": "Specifies the default mapping xml file."
+            },
+            "enabled": {
+              "type": "boolean",
+              "description": "Activates / deactivates the manual mapping."
+            },
+            "useDefaultMapping": {
+              "type": "boolean",
+              "description": "Activates / deactivates the usage of the default file."
+            }
+          },
+          "required": [
+            "enabled",
+            "useDefaultMapping"
+          ]
+        },
+        "ownFileForEachInstance": {
+          "type": "boolean",
+          "description": "Flag to use own file for each instance."
+        },
+        "ownFolderForEachSplitter": {
+          "type": "boolean",
+          "description": "Flag to use own folder for each splitter."
+        }
+      },
+      "required": [
+        "manualMapping",
+        "ownFileForEachInstance",
+        "ownFolderForEachSplitter"
+      ]
+    },
+    "environment": {
+      "type": "object",
+      "description": "Environment configuration.",
+      "properties": {
+        "compiler": {
+          "type": "object",
+          "description": "Compiler of the target platform.",
+          "properties": {
+            "uuid": {
+              "type": "string",
+              "description": "UUID of the compiler."
+            },
+            "value": {
+              "type": "string",
+              "description": "Value of the compiler."
+            }
+          },
+          "required": [
+            "value"
+          ]
+        },
+        "derivative": {
+          "type": "object",
+          "description": "Derivative of the target platform.",
+          "properties": {
+            "uuid": {
+              "type": "string",
+              "description": "UUID of the derivative."
+            },
+            "value": {
+              "type": "string",
+              "description": "Value of the derivative."
+            }
+          },
+          "required": [
+            "value"
+          ]
+        },
+        "moduleSpecificDerivatives": {
+          "type": "array",
+          "description": "List of module-specific derivatives.",
+          "items": {
+            "$ref": "#/$defs/moduleSpecificDerivative"
+          }
+        },
+        "postBuildLoadableSupport": {
+          "type": "boolean",
+          "description": "Activation/Deativation of postbuild-loadable support."
+        },
+        "postBuildSelectableSupport": {
+          "type": "boolean",
+          "description": "Activation/Deativation of postbuild-selectable support."
+        },
+        "projectType": {
+          "type": "object",
+          "description": "Project type configuration.",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "Standard",
+                "SoftwareClusterConnection"
+              ],
+              "description": "Type of the project."
+            }
+          },
+          "required": [
+            "type"
+          ]
+        },
+        "sipIds": {
+          "type": "array",
+          "description": "List of SIP IDs.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "syncJobRole": {
+          "type": "string",
+          "description": "Sync job role."
+        },
+        "targetType": {
+          "type": "string",
+          "enum": [
+            "Real Target",
+            "Virtual Target (vVIRTUALtarget)",
+            "Real Target & Virtual Target (vVIRTUALtarget)",
+            ""
+          ],
+          "description": "Type of the target."
+        },
+        "useCases": {
+          "type": "array",
+          "description": "List of use cases.",
+          "items": {
+            "$ref": "#/$defs/useCase"
+          }
+        },
+        "vectorEmbeddedProject": {
+          "type": "string",
+          "description": "Unique identifier for the Vector Embedded Project."
+        },
+        "vectorEmbeddedSubProject": {
+          "type": "string",
+          "description": "Name of the sub project."
+        }
+      },
+      "required": [
+        "postBuildLoadableSupport",
+        "postBuildSelectableSupport",
+        "projectType",
+        "sipIds"
+      ]
+    },
+    "externalFileSupervision": {
+      "type": "object",
+      "description": "External file supervision configuration.",
+      "properties": {
+        "supervisedFiles": {
+          "type": "array",
+          "description": "List of supervised files.",
+          "items": {
+            "$ref": "#/$defs/supervisedFile"
+          }
+        }
+      }
+    },
+    "folders": {
+      "type": "object",
+      "description": "Configuration of some folders: Relative paths are considered relative to the location of this configuration file.",
+      "properties": {
+        "genData": {
+          "type": "string",
+          "description": "Output folder for the generated module files."
+        },
+        "genDataVtt": {
+          "type": "string",
+          "description": "Output folder for the generated module files for the virtual target."
+        },
+        "logs": {
+          "type": "string",
+          "description": "Folder for the generated log files."
+        },
+        "mcData": {
+          "type": "string",
+          "description": "Output folder for the generated a2l files with the measurement and calibration data of the modules."
+        },
+        "source": {
+          "type": "string",
+          "description": "Output folder for the generated code template files, e.g. the SWC Templates and Contract Headers."
+        },
+        "syncJobData": {
+          "type": "string",
+          "description": "Path to the SyncJobData folder."
+        },
+        "trace": {
+          "type": "string",
+          "description": "Path to the folder that contains the origin traces."
+        }
+      },
+      "required": [
+        "genData",
+        "logs",
+        "source",
+        "trace"
+      ]
+    },
+    "miscellaneous": {
+      "type": "object",
+      "description": "Miscellaneous configuration.",
+      "properties": {
+        "a2lGenerator": {
+          "type": "object",
+          "description": "A2L generator configuration.",
+          "properties": {
+            "a2lMasterFile": {
+              "type": "string",
+              "description": "Path to A2L master file that will be used with the McDataConverter."
+            },
+            "a2lGeneratorAddParams": {
+              "type": "string",
+              "description": "Additional parameters for the A2L generation."
+            }
+          },
+          "required": [
+            "a2lMasterFile",
+            "a2lGeneratorAddParams"
+          ]
+        },
+        "amdGenerateDebugData": {
+          "type": "boolean",
+          "description": "Flag to generate AMD debug data."
+        }
+      },
+      "required": [
+        "amdGenerateDebugData"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "description": "Project name."
+    },
+    "postBuildLoadable": {
+      "type": "object",
+      "description": "Post-build loadable configuration.",
+      "properties": {
+        "currentConfigurationPhase": {
+          "type": "string",
+          "enum": [
+            "PRE_COMPILE",
+            "LINK_TIME",
+            "POST_BUILD"
+          ],
+          "description": "Current configuration phase."
+        },
+        "rteDataFreezeChecksum": {
+          "type": "string",
+          "description": "RTE data freeze checksum."
+        },
+        "rteDataFreezeFile": {
+          "type": "string",
+          "description": "Path to the RTE data freeze file."
+        }
+      },
+      "required": [
+        "currentConfigurationPhase",
+        "rteDataFreezeChecksum"
+      ]
+    },
+    "references": {
+      "type": "object",
+      "description": "References configuration.",
+      "properties": {
+        "dvWorkspace": {
+          "type": "string",
+          "description": "Location of the DaVinci Developer Classic workspace. Relative paths are considered relative to the location of this configuration file."
+        },
+        "useLatestVtt": {
+          "type": "boolean",
+          "description": "Flag to use the latest vVIRTUALtarget application."
+        },
+        "vttInstallPath": {
+          "type": "string",
+          "description": "Location of the vVIRTUALtarget application. Relative paths are considered relative to the location of this configuration file."
+        },
+        "vttProjectFile": {
+          "type": "string",
+          "description": "Path to the vVIRTUALtarget project file. Relative paths are considered relative to the location of this configuration file."
+        }
+      }
+    },
+    "scriptLocations": {
+      "type": "array",
+      "description": "List of script locations.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "swctGeneration": {
+      "type": "object",
+      "description": "Configuration of Software Component Templates generation.",
+      "properties": {
+        "components": {
+          "type": "array",
+          "description": "List of components.",
+          "items": {
+            "$ref": "#/$defs/component"
+          }
+        },
+        "generationMode": {
+          "type": "string",
+          "enum": [
+            "SWCT_ONLY",
+            "SWCT_AND_CP_HEADER",
+            "CP_HEADER_ONLY"
+          ],
+          "description": "Define the output of the SWC templates and contract phase header generation."
+        }
+      }
+    },
+    "variance": {
+      "type": "object",
+      "description": "Variance configuration.",
+      "properties": {
+        "evaluatedVariantSet": {
+          "type": "object",
+          "description": "Evaluated variant set configuration.",
+          "properties": {
+            "arPath": {
+              "type": "string",
+              "description": "AUTOSAR path to the evaluated variant set."
+            }
+          },
+          "required": [
+            "arPath"
+          ]
+        }
+      }
+    },
+    "version": {
+      "type": "string",
+      "description": "The version of the project."
+    },
+    "hasUnsafeTransactionChanges": {
+      "type": "boolean",
+      "description": "The \"unsafe transaction changes\" project marker. If this is set to true, an unsafe transaction was performed at least once on this project which makes it unfit for collaboration.",
+      "default": false
+    },
+    "allowMergeConflicts": {
+      "type": "boolean",
+      "description": "If the flag allowMergeConflicts is set to true, conflicting ARXML data in different files is merged according to the priority of the files.",
+      "default": true
+    }
+  },
+  "required": [
+    "ecuc",
+    "name",
+    "postBuildLoadable"
+  ],
+  "$defs": {
+    "useCase": {
+      "type": "object",
+      "description": "Use case configuration.",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": "Value of the use case. There are certain valid values for each selected usecase."
+        },
+        "vector": {
+          "type": "string",
+          "description": "Vector of the use case."
+        }
+      },
+      "required": [
+        "value",
+        "vector"
+      ]
+    },
+    "component": {
+      "type": "object",
+      "description": "Component configuration.",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "description": "Flag to enable the component."
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the component."
+        },
+        "targetFolder": {
+          "type": "string",
+          "description": "Target folder for the component."
+        }
+      },
+      "required": [
+        "enabled",
+        "name"
+      ]
+    },
+    "supervisedFile": {
+      "type": "object",
+      "description": "Supervised file configuration.",
+      "properties": {
+        "ID": {
+          "type": "string",
+          "description": "ID of the supervised file."
+        },
+        "hash": {
+          "type": "string",
+          "description": "Hash of the supervised file."
+        },
+        "value": {
+          "type": "string",
+          "description": "Path to the supervised file."
+        }
+      },
+      "required": [
+        "ID",
+        "hash",
+        "value"
+      ]
+    },
+    "moduleSpecificDerivative": {
+      "type": "object",
+      "description": "Module-specific derivative configuration.",
+      "properties": {
+        "derivativeName": {
+          "type": "string",
+          "description": "Name of the derivative."
+        },
+        "derivativeUUID": {
+          "type": "string",
+          "description": "UUID of the derivative."
+        },
+        "moduleName": {
+          "type": "string",
+          "description": "Name of the module."
+        }
+      },
+      "required": [
+        "derivativeName",
+        "moduleName"
+      ]
+    }
+  }
+}

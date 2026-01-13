@@ -7,7 +7,7 @@ bazel_dep(name = "rules_ecu_config", version = "1.0.2")
 bazel_dep(name = "rules_cfg6", version = "1.0.1")
 
 # Import the BSW package as a local repository.
-bsw_pkg = use_repo_rule("//bazel-starter:bsw_pkg.bzl", "bsw_pkg")
+bsw_pkg = use_repo_rule("//bazel-starter:helpers.bzl", "bsw_pkg")
 bsw_pkg(
     name = "bsw_package",
     # Provide the path to the BSW package folder.
@@ -26,10 +26,10 @@ ecu_config.tools(
     dvarjson_sha256 = "38D3E30EF6092C31D2F0E37747130684DFC77C4E8E94850D0FEA326BF8B7706F",
     dvarjson_url = "https://packages.vehub.vector.com/apt/pool/generic/vector-davinci-autosar-json/1.1.0/vector-dvarjson-1.1.0-amd64.deb",
     # For Windows use:
-    #cfg6_sha256 = "1FF6D0D3E0256853633ED3A39CFC0B86841BF6FABE0AA4544C3CF29A384A3608",
-    #cfg6_url = "https://packages.vehub.vector.com/nuget/flatcontainer/vector-davinci-configurator-classic-cli/6.2.1/vector-davinci-configurator-classic-cli.6.2.1.nupkg",
-    #dvarjson_sha256 = "E0F86CDA336BAF3C8BCBF39BD458E429153EFCD384D388915FCEE2A10605C076",
-    #dvarjson_url = "https://packages.vehub.vector.com/nuget/flatcontainer/vector-dvarjson/1.1.0/vector-dvarjson.1.1.0.nupkg",
+    # cfg6_sha256 = "ED98F236D5D2622DFA6ED300AB9DAB6D584649B4746CCADCAAF463E0FFECE460",
+    # cfg6_url = "https://packages.vehub.vector.com/nuget/flatcontainer/vector-davinci-configurator-classic/6.2.1/vector-davinci-configurator-classic.6.2.1.nupkg",
+    # dvarjson_sha256 = "E0F86CDA336BAF3C8BCBF39BD458E429153EFCD384D388915FCEE2A10605C076",
+    # dvarjson_url = "https://packages.vehub.vector.com/nuget/flatcontainer/vector-dvarjson/1.1.0/vector-dvarjson.1.1.0.nupkg",
 )
 
 # Import tool repos and register toolchains.
@@ -40,5 +40,4 @@ register_toolchains("@dvarjson//:toolchain")
 # Include bazel-starter projects.
 include("//bazel-starter/com-diag:com-diag.MODULE.bazel")
 include("//bazel-starter/eac:eac.MODULE.bazel")
-include("//bazel-starter/mcal:mcal.MODULE.bazel")
 include("//bazel-starter/project-creation:project-creation.MODULE.bazel")

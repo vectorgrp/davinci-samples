@@ -1,7 +1,7 @@
 {
   "$schema": "../Output/Schema/General.settings.schema.json",
   "allowMergeConflicts": false,
-  "name": "ComDiag",
+  "name": "eac",
   "ecucSplitter": {
     "enabled": true,
     "manualMapping": {
@@ -25,7 +25,7 @@
       "domain": "SystemExtractProject",
       "type": "Standard"
     },
-    "sipIds": [],
+    "sipIds": ["<SipId>"],
     "syncJobRole": "None",
     "targetType": "Real Target",
     "useCases": []

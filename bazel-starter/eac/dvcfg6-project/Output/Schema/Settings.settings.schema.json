@@ -1,0 +1,29 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "description": "Schema supporting any strings as keys with nested objects or string or boolean values. This schema is for the files referenced by the keys misc, generator and acknowledgements.",
+    "additionalProperties": {
+        "$ref": "#/$defs/nestedObjectOrStringOrBoolean"
+    },
+    "$defs": {
+        "nestedObjectOrStringOrBoolean": {
+            "oneOf": [
+                {
+                    "type": "object",
+                    "description": "Nested object with string keys and values.",
+                    "additionalProperties": {
+                        "$ref": "#/$defs/nestedObjectOrStringOrBoolean"
+                    }
+                },
+                {
+                    "type": "string",
+                    "description": "String value."
+                },
+                {
+                    "type": "boolean",
+                    "description": "Boolean value."
+                }
+            ]
+        }
+    }
+}
