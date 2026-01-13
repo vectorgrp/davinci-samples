@@ -1,6 +1,6 @@
 # Bazel Starter for EcuC-as-Code
 
-This repository provides Bazel build rules and configurations for ECU projects using DaVinci Configurator Classic Version 6. It enables ECU extraction, ARXML merging, module configuration and EcuC-as-Code within Bazel workflows.
+Bazel starter showing how to implement the EcuC-as-Code workflow for ECU configuration in DaVinci Projects.
 
 ## Usage
 

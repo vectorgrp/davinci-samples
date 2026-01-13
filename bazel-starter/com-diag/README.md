@@ -1,6 +1,6 @@
 # Bazel Starter for ECU Communication & Diagnostics
 
-This repository provides Bazel build rules and configurations for ECU projects using DaVinci Configurator Classic Version 6. It enables ECU extraction, ARXML merging, and module configuration within Bazel workflows.
+Bazel starter showing the steps required to import and update communication, diagnostic, and other description files for an existing DaVinci Project.
 
 ## Usage
 

@@ -17,6 +17,7 @@ ecu_config = use_extension("@rules_ecu_config//:ecu_config.bzl", "ecu_config")
 ecu_config.project(
     bsw_pkg = "@bsw_package//:folder",
     dvjson = "//bazel-starter/com-diag:cfg6-project/ComDiag.dvjson",
+    # Providing any of the following files enables Bazel to update the project when necessary.
     # Optionally provide diagnostic descriptions (for CDD support see https://marketplace.visualstudio.com/items?itemName=VectorGroup.dvarjson).
     # diag_modules = [
     #     "<LegacyDiagnosticDataDefinitionFile.json>",
