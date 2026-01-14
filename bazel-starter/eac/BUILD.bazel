@@ -10,7 +10,7 @@ load("@rules_cfg6//:defs.bzl", "as_code_eac", "merged_extract", "replace_modules
 # Project specific rules.
 load("@eac//:defs.bzl", "eac_jar", "generate")
 
-exports_files(["cfg6-project/eac.dvjson"])
+exports_files(["dvcfg6-project/eac.dvjson"])
 
 # Extract an ECU from a system description.
 # system_extract(

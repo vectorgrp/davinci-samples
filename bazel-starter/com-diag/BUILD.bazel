@@ -10,7 +10,7 @@ load("@rules_cfg6//:defs.bzl", "merged_extract", "replace_modules", "system_extr
 # Project specific rules.
 load("@ComDiag//:defs.bzl", "generate")
 
-exports_files(["cfg6-project/ComDiag.dvjson"])
+exports_files(["dvcfg6-project/ComDiag.dvjson"])
 
 # Extract an ECU from a system description.
 # system_extract(
