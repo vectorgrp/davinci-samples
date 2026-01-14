@@ -4,39 +4,36 @@ Welcome to **DaVinci Samples**, an open-source repository designed to help devel
 
 ## 📌 What is This Repository For?
 
-This repository provides sample resources to help you integrate DaVinci Configurator Classic workflows:
+This repository provides sample resources to help you integrate DaVinci Configurator Classic Version 6 workflows:
 
--   **Ready-Set-Go-Scripts** demonstrating how DaVinci Configurator Classic integrates into typical MICROSAR projects.
-
-    -   Create a new DaVinci Project and link additional workspaces
-    -   Project Import and Update
-
--   **Bazel Starter** shows how to build and automate configurations using Bazel and modern build systems. You can leverage various Bazel rules depending on your build needs:
-
-    -   Create a new DaVinci Project or reuse an existing one
-    -   Execute EcuC-as-Code
-    -   Project Import and Update
-    -   Validate and generate the DaVinci Project
+- **Ready-Set-Go-Scripts** demonstrating how DaVinci Configurator Classic Version 6 integrates into typical MICROSAR projects.
+  - Create a new DaVinci project and link additional workspaces.
+  - Project Import and Update
+- **Bazel Starter** shows how to build and automate configurations using Bazel and modern build systems. You can leverage various Bazel rules depending on your build needs:
+  - Create a new DaVinci Project or reuse an existing one
+  - Execute EcuC-as-Code
+  - Project Import and Update
+  - Validate and generate the DaVinci Project
 
 ## 🛠 Requirements
 
 Always required:
 
--   DaVinci Configurator Classic Version 6
--   A valid MICROSAR package
+- DaVinci Configurator Classic Version 6
+- A valid MICROSAR BSW package
 
 If using scripts:
 
--   DaVinci Developer Classic (Release 4.17 SP2 or newer)
--   DaVinci Team (Release 6.2 or newer)
+- DaVinci Developer Classic (Release 4.17 SP2 or newer)
+- DaVinci Team (Release 6.2 or newer)
 
 If using pipelines (if using Bazel):
 
--   Bazel by Google
+- Bazel by Google
 
 If using EcuC as Code:
 
--   EcuC-As-Code Development Kit
+- EcuC-As-Code Development Kit
 
 ## 🚀 Getting Started
 
@@ -45,7 +42,7 @@ If using EcuC as Code:
     git clone https://github.com/vectorgrp/davinci-samples.git
     ```
 2. Explore the samples:
-    - Navigate to the folder that matches your use case.
+   - Navigate to the folder that matches your use case.
 3. Follow the instructions in each folder’s README to get started.
 
 ## 📂 Repository Structure

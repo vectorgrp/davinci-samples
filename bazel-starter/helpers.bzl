@@ -10,15 +10,15 @@ bsw_pkg = repository_rule(
     implementation = _bsw_pkg_impl,
 )
 
-def _migrated_project_impl(repository_ctx):
-    dvjson = repository_ctx.path(repository_ctx.attr.dvjson)
-    repository_ctx.symlink(dvjson, "_")
-    repository_ctx.file("BUILD.bazel", 'filegroup(name = "dvjson", srcs = ["_/{}"])'.format(dvjson.basename))
+def _dvjson_impl(repository_ctx):
+    file_path = repository_ctx.path(repository_ctx.attr.path)
+    repository_ctx.symlink(file_path.dirname, "_")
+    repository_ctx.file("BUILD.bazel", 'filegroup(name = "{name}", srcs = ["_/{name}"], visibility = ["//visibility:public"])'.format(name = file_path.basename))
 
-migrated_project = repository_rule(
-    doc = "Repo rule for referencing a migrated DaVinci project.",
+dvjson = repository_rule(
+    doc = "Repo rule for referencing an existing .dvjson file.",
     attrs = {
-        "dvjson": attr.string(doc = "The project's dvjson file.", mandatory = True),
+        "path": attr.string(doc = "The path to the .dvjson file.", mandatory = True),
     },
-    implementation = _migrated_project_impl,
+    implementation = _dvjson_impl,
 )

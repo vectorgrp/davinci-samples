@@ -4,14 +4,6 @@
 # Author: Vector Informatik GmbH
 ###############################################################################
 
-# Use this for using your own DaVinci project instead of the empty demo project.
-# migrated_project = use_repo_rule("//bazel-starter:helpers.bzl", "migrated_project")
-# migrated_project(
-#     name = "<MigratedProject>",
-#     dvjson = "<DvjsonFilePath>",
-# )
-# With the above, dvjson attribute below can be set to "@<MigratedProject>//:dvjson".
-
 # For details on DaVinci Configurator Classic Version 6 see https://help.vector.com/davinci-configurator-classic/en/current.
 ecu_config = use_extension("@rules_ecu_config//:ecu_config.bzl", "ecu_config")
 ecu_config.project(
@@ -36,4 +28,12 @@ ecu_config.project(
     # ],
 )
 # The name of the project repo is set to the name of the referenced .dvjson file.
+# Take care to adjust this name when using a different .dvjson file (see below).
 use_repo(ecu_config, "ComDiag")
+
+# Use your own DaVinci project (change "dvjson" attribute above to "@MigratedProject//:MyEcu.dvjson").
+# dvjson = use_repo_rule("//bazel-starter:helpers.bzl", "dvjson")
+# dvjson(
+#     name = "MigratedProject",
+#     path = "/absolute/path/to/MyEcu.dvjson",
+# )
