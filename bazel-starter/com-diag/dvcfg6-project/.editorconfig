@@ -1,0 +1,35 @@
+# EditorConfig for DaVinci Configurator Projects
+#
+# EditorConfig helps developers define and maintain consistent
+# coding styles between different editors and IDEs
+# editorconfig.org
+
+# The DaVinci Configurator tool applies following format settings to it's project files.
+# To maintain consistent file formatting with other editors, we recommend you to keep these unchanged.
+# This file is not a configuration file for the behavior of the DaVinci Configurator.
+#
+# Note: Some editors like VisualStudio Code and Notepad++ need plugins to support EditorConfig.
+# Please install them to be conform to it. The plugin overview and an overview of editors
+# that natively support EditorConfig can be found here: editorconfig.org
+#
+# DaVinci Configurator Defaults:
+# [*.{arxml,dvjson,json,xml}]
+# end_of_line = lf
+# charset = utf-8
+# trim_trailing_whitespace = true
+# insert_final_newline = true
+# indent_style = space
+# indent_size = 2
+
+# The Vector-Specific file formats ARXML and DVJSON need additional settings for indentation formatting.
+# Please check if your editor supports file type association and explicitly assign
+# DVJSON as JSON and ARXML as XML files. Here are some tutorials for commonly used editors:
+# Intellij: https://www.jetbrains.com/help/idea/creating-and-registering-file-types.html#change-extension
+# Visual Studio Code: https://code.visualstudio.com/docs/languages/overview#_add-a-file-extension-to-a-language
+[*.{arxml,dvjson,json,xml}]
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+indent_style = space
+indent_size = 2

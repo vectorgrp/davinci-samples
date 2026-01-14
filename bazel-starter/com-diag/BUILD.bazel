@@ -1,0 +1,49 @@
+###############################################################################
+# BUILD.bazel
+# Purpose: Bazel build defines the build targets.
+# Author: Vector Informatik GmbH
+###############################################################################
+
+# Rules for preparing project input files.
+load("@rules_cfg6//:defs.bzl", "merged_extract", "replace_modules", "system_extract")
+
+# Project specific rules.
+load("@ComDiag//:defs.bzl", "generate")
+
+exports_files(["dvcfg6-project/ComDiag.dvjson"])
+
+# Extract an ECU from a system description.
+# system_extract(
+#     name = "<MyExtract>",
+#     ecu = "<EcuName>",
+#     sysd = "<MySystemDescription.arxml>",
+# )
+
+# Merge multiple .arxml files into an ECU extract.
+# merged_extract(
+#     name = "<MyMergedExtract>",
+#     srcs = [
+#         "<MyExtract>",
+#         "<File.arxml>",
+#     ],
+# )
+
+# Import modules in 'replace mode'.
+# replace_modules(
+#     name = "<MyReplacedModule>",
+#     arxmls = ["<Module.arxml>"],
+# )
+
+# Generate the code.
+generate(
+    name = "code",
+    # Restrict the modules to generate code for using the optional modules and/or excluded attributes.
+    modules = [],
+    excluded = [],
+    # Specify the external generation steps to execute using the optional ext_steps attribute.
+    ext_steps = [],
+    type = "REAL", # "REAL" or "VTT"
+    # Additional optional attributes defaulting to the values shown below.
+    keep_tmp_files = False,
+    skip_up_to_date_checks = False,
+)

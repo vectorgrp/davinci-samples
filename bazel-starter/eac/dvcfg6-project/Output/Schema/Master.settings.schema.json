@@ -1,0 +1,40 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema#",
+    "title": "JSON schema for the master file of a project",
+    "type": "object",
+    "description": "Schema for the master file of a project (with file extension .dvjson, but in JSON format) that contains references to other JSON files. Relative paths of the referenced JSON files are considered relative to the location of the master file.",
+    "properties": {
+        "arxmlProjectContent": {
+            "type": "string",
+            "description": "Path to the JSON file that contains the locations of the ARXML files to load."
+        },
+        "general": {
+            "type": "string",
+            "description": "Path to the JSON file that contains general settings."
+        },
+        "ifp": {
+            "type": "string",
+            "description": "Path to the JSON file that contains IFP related settings."
+        },
+        "generator": {
+            "type": "string",
+            "description": "Path to the JSON file that contains generator related settings."
+        },
+        "misc": {
+            "type": "string",
+            "description": "Path to the JSON file that contains other settings."
+        },
+        "acknowledgements": {
+            "type": "string",
+            "description": "Path to the acknowledgements JSON file."
+        },
+        "variables": {
+            "type": "string",
+            "description": "Path to the JSON settings file that contains variable definitions."
+        }
+    },
+    "required": [
+        "arxmlProjectContent",
+        "general"
+    ]
+}

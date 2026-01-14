@@ -1,0 +1,50 @@
+{
+  "$schema": "../Output/Schema/General.settings.schema.json",
+  "allowMergeConflicts": true,
+  "name": "ComDiag",
+  "ecucSplitter": {
+    "enabled": true,
+    "manualMapping": {
+      "enabled": false,
+      "useDefaultMapping": false
+    },
+    "ownFileForEachInstance": false,
+    "ownFolderForEachSplitter": false
+  },
+  "environment": {
+    "compiler": {
+      "value": ""
+    },
+    "derivative": {
+      "value": ""
+    },
+    "pinLayout": "",
+    "postBuildLoadableSupport": false,
+    "postBuildSelectableSupport": false,
+    "projectType": {
+      "domain": "SystemExtractProject",
+      "type": "Standard"
+    },
+    "sipIds": ["CBD2400275_D03"],
+    "syncJobRole": "None",
+    "targetType": "Real Target",
+    "useCases": []
+  },
+  "folders": {
+    "genData": "../Output/Source/GenData",
+    "logs": "../Output/Log",
+    "mcData": "../Output/Source/McData",
+    "source": "../Output/Source/Templates",
+    "trace": "../Output/Trace",
+    "genDataVtt": "../Output/Source/GenDataVtt"
+  },
+  "author": "",
+  "ecuc": {
+    "activeModelRootPackage": "/ActiveEcuC/ActiveEcuC"
+  },
+  "postBuildLoadable": {
+    "currentConfigurationPhase": "PRE_COMPILE",
+    "rteDataFreezeChecksum": ""
+  },
+  "version": "1.0"
+}

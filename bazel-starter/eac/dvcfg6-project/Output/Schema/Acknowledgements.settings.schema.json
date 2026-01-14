@@ -1,0 +1,79 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Sample File Schema",
+    "description": "Schema for the provided JSON sample file.",
+    "type": "object",
+    "properties": {
+        "com.vector.cfg.consistency": {
+            "type": "object",
+            "description": "Root element for the acknowledgement data.",
+            "patternProperties": {
+                "^ACK_": {
+                    "$ref": "#/$defs/ackEntry"
+                }
+            },
+            "additionalProperties": false
+        }
+    },
+    "$defs": {
+        "description": {
+            "type": "object",
+            "description": "Description of the acknowledgement.",
+            "properties": {
+                "a ResultId": {
+                    "type": "string",
+                    "description": "Result ID."
+                },
+                "b Severity": {
+                    "type": "string",
+                    "description": "Severity level."
+                },
+                "c AcknowledgementComment": {
+                    "type": "string",
+                    "description": "Comment on the acknowledgement."
+                },
+                "d IsOnDemand": {
+                    "type": "boolean",
+                    "description": "Indicates if it is on demand."
+                },
+                "e ResultDescription": {
+                    "type": "string",
+                    "description": "Description of the result."
+                }
+            },
+            "required": [
+                "a ResultId",
+                "b Severity",
+                "c AcknowledgementComment",
+                "d IsOnDemand",
+                "e ResultDescription"
+            ]
+        },
+        "ackEntry": {
+            "type": "object",
+            "description": "Acknowledgement entry.",
+            "properties": {
+                "DESCRIPTION": {
+                    "$ref": "#/$defs/description"
+                },
+                "Encoded": {
+                    "type": "object",
+                    "description": "Encoded data.",
+                    "properties": {
+                        "AcknowledgementDataEncoding": {
+                            "type": "string",
+                            "description": "Encoding of the acknowledgement data."
+                        }
+                    },
+                    "required": [
+                        "AcknowledgementDataEncoding"
+                    ]
+                }
+            },
+            "required": [
+                "DESCRIPTION",
+                "Encoded"
+            ]
+        }
+    }
+}
