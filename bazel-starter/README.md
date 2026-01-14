@@ -18,4 +18,4 @@
 
 1. Configure the path to your `<BswPackage>` in [MODULE.bazel](../MODULE.bazel).
 2. Select a Bazel starter that matches your use case and adjust it to your specific requirements
-   (see `Usage` section in [com-diag](com-diag/README.md), [eac](eac/README.md) or [project-creation](project-creation/README.md) READMEs).
+   (see "Usage" section in [com-diag](com-diag/README.md), [eac](eac/README.md) or [project-creation](project-creation/README.md) READMEs).
