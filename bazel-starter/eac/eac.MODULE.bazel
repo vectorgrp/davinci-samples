@@ -21,7 +21,7 @@ ecu_config.project(
         "//bazel-starter/eac:MySecondEac",
     ],
     bsw_pkg = "@bsw_package//:folder",
-    dvjson = "//bazel-starter/eac:cfg6-project/eac.dvjson",
+    dvjson = "//bazel-starter/eac:dvcfg6-project/eac.dvjson",
     # Providing any of the following files enables Bazel to update the project when necessary.
     # Optionally provide diagnostic descriptions (for CDD support see https://marketplace.visualstudio.com/items?itemName=VectorGroup.dvarjson).
     # diag_modules = [
