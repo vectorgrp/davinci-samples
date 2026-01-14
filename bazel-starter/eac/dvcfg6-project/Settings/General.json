@@ -1,6 +1,6 @@
 {
   "$schema": "../Output/Schema/General.settings.schema.json",
-  "allowMergeConflicts": false,
+  "allowMergeConflicts": true,
   "name": "eac",
   "ecucSplitter": {
     "enabled": true,
