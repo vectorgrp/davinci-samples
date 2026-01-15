@@ -1,5 +1,5 @@
 # Configure Bazel to trust any self-signed SSL certificates.
-# startup --host_jvm_args=-Djavax.net.ssl.trustStore='<truststore>'
+startup --host_jvm_args=-Djavax.net.ssl.trustStore='<truststore>'
 
 build --java_runtime_version=remotejdk_21
 
@@ -9,6 +9,6 @@ build --action_env=TEMP
 build --action_env=TMP
 build --action_env=USERPROFILE
 
-# Configure bazel to use Vector's and Bazel Central Registry for fetching external dependencies.
+# Configure Bazel to use Vector's and Bazel Central Registry for fetching external dependencies.
 common --registry=https://raw.githubusercontent.com/vectorgrp/bazel-registry/main
 common --registry=https://bcr.bazel.build

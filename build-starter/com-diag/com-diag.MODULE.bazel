@@ -8,7 +8,7 @@
 ecu_config = use_extension("@rules_ecu_config//:ecu_config.bzl", "ecu_config")
 ecu_config.project(
     bsw_pkg = "@bsw_package//:folder",
-    dvjson = "//bazel-starter/com-diag:dvcfg6-project/ComDiag.dvjson",
+    dvjson = "//build-starter/com-diag:dvcfg6-project/ComDiag.dvjson",
     # Providing any of the following files enables Bazel to update the project when necessary.
     # Optionally provide diagnostic descriptions (for CDD support see https://marketplace.visualstudio.com/items?itemName=VectorGroup.dvarjson).
     # diag_modules = [
@@ -32,7 +32,7 @@ ecu_config.project(
 use_repo(ecu_config, "ComDiag")
 
 # Use your own DaVinci project (change "dvjson" attribute above to "@MigratedProject//:MyEcu.dvjson").
-# dvjson = use_repo_rule("//bazel-starter:helpers.bzl", "dvjson")
+# dvjson = use_repo_rule("//build-starter:helpers.bzl", "dvjson")
 # dvjson(
 #     name = "MigratedProject",
 #     path = "/absolute/path/to/MyEcu.dvjson",

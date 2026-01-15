@@ -495,9 +495,9 @@
     "@@rules_ecu_config+//:ecu_config.bzl%ecu_config": {
       "general": {
         "bzlTransitiveDigest": "NpSRgHbdSYxDZQyU7PxbuqMPqUP2FMuGVPAILTXBL7w=",
-        "usagesDigest": "1DUVH64YsL7eJSFewb/fVadTewX2enhuO69kYqi5fQY=",
+        "usagesDigest": "vHhJdwP8G3yuJfrMrXLXlqn8iZF2lpOrVldJUVziUYk=",
         "recordedFileInputs": {
-          "@@//bazel-starter/project-creation/project-creation.json": "31954d185722bc196832e4f124d866fec4f086d24435855f213fcc0b8d8bf5e5"
+          "@@//build-starter/project-creation/project-creation.json": "31954d185722bc196832e4f124d866fec4f086d24435855f213fcc0b8d8bf5e5"
         },
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -521,7 +521,7 @@
             "attributes": {
               "cfg6": "@@rules_ecu_config++ecu_config+cfg6//:cfg6",
               "bsw_pkg": "@@+_repo_rules+bsw_package//:folder",
-              "dvjson": "@@//bazel-starter/com-diag:cfg6-project/ComDiag.dvjson",
+              "dvjson": "@@//build-starter/com-diag:dvcfg6-project/ComDiag.dvjson",
               "evs": [],
               "extract": [],
               "modules": [],
@@ -535,15 +535,15 @@
             "attributes": {
               "cfg6": "@@rules_ecu_config++ecu_config+cfg6//:cfg6",
               "bsw_pkg": "@@+_repo_rules+bsw_package//:folder",
-              "dvjson": "@@//bazel-starter/eac:cfg6-project/eac.dvjson",
+              "dvjson": "@@//build-starter/eac:dvcfg6-project/eac.dvjson",
               "evs": [],
               "extract": [],
               "modules": [],
               "diag_modules": [],
               "update_switches": "",
               "as_code": [
-                "@@//bazel-starter/eac:MyFirstEac",
-                "@@//bazel-starter/eac:MySecondEac"
+                "@@//build-starter/eac:MyFirstEac",
+                "@@//build-starter/eac:MySecondEac"
               ]
             }
           },
@@ -552,7 +552,7 @@
             "attributes": {
               "cfg6": "@@rules_ecu_config++ecu_config+cfg6//:cfg6",
               "bsw_pkg": "@@+_repo_rules+bsw_package//:folder",
-              "creation_file": "@@//bazel-starter/project-creation:project-creation.json",
+              "creation_file": "@@//build-starter/project-creation:project-creation.json",
               "evs": [],
               "extract": [],
               "modules": [],
