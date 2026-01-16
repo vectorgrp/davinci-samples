@@ -7,3 +7,5 @@ Output/Config/EaC/
 Output/Log/
 
 Output/Trace/
+
+*.~lock
