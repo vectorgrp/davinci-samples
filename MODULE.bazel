@@ -7,7 +7,7 @@ bazel_dep(name = "rules_ecu_config", version = "1.0.2")
 bazel_dep(name = "rules_cfg6", version = "1.0.1")
 
 # Import the BSW package as a local repository.
-bsw_pkg = use_repo_rule("//bazel-starter:helpers.bzl", "bsw_pkg")
+bsw_pkg = use_repo_rule("//build-starter:helpers.bzl", "bsw_pkg")
 bsw_pkg(
     name = "bsw_package",
     # Provide the path to the BSW package folder.
@@ -37,7 +37,7 @@ use_repo(ecu_config, "cfg6", "dvarjson")
 register_toolchains("@cfg6//:toolchain")
 register_toolchains("@dvarjson//:toolchain")
 
-# Include bazel-starter projects.
-include("//bazel-starter/com-diag:com-diag.MODULE.bazel")
-include("//bazel-starter/eac:eac.MODULE.bazel")
-include("//bazel-starter/project-creation:project-creation.MODULE.bazel")
+# Include build-starter projects.
+include("//build-starter/com-diag:com-diag.MODULE.bazel")
+include("//build-starter/eac:eac.MODULE.bazel")
+include("//build-starter/project-creation:project-creation.MODULE.bazel")

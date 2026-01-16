@@ -9,11 +9,11 @@ ecu_config = use_extension("@rules_ecu_config//:ecu_config.bzl", "ecu_config")
 ecu_config.project(
     # Provide EaC jars (see BUILD.bazel on how to define EaC Java targets).
     as_code = [
-        "//bazel-starter/eac:MyFirstEac",
-        "//bazel-starter/eac:MySecondEac",
+        "//build-starter/eac:MyFirstEac",
+        "//build-starter/eac:MySecondEac",
     ],
     bsw_pkg = "@bsw_package//:folder",
-    dvjson = "//bazel-starter/eac:dvcfg6-project/eac.dvjson",
+    dvjson = "//build-starter/eac:dvcfg6-project/eac.dvjson",
     # Providing any of the following files enables Bazel to update the project when necessary.
     # Optionally provide diagnostic descriptions (for CDD support see https://marketplace.visualstudio.com/items?itemName=VectorGroup.dvarjson).
     # diag_modules = [
@@ -37,7 +37,7 @@ ecu_config.project(
 use_repo(ecu_config, "eac")
 
 # Use your own DaVinci project (change "dvjson" attribute above to "@MigratedProject//:MyEcu.dvjson").
-# dvjson = use_repo_rule("//bazel-starter:helpers.bzl", "dvjson")
+# dvjson = use_repo_rule("//build-starter:helpers.bzl", "dvjson")
 # dvjson(
 #     name = "MigratedProject",
 #     path = "/absolute/path/to/MyEcu.dvjson",
