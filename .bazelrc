@@ -1,5 +1,5 @@
 # Configure Bazel to trust any self-signed SSL certificates.
-# startup --host_jvm_args=-Djavax.net.ssl.trustStore='<truststore>'
+# startup --host_jvm_args=-Djavax.net.ssl.trustStore='Windows-ROOT'
 
 build --java_runtime_version=remotejdk_21
 
