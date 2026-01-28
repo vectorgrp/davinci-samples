@@ -29,7 +29,7 @@ If using scripts:
 
 If using pipelines (if using Bazel):
 
-- Bazel by Google
+- Bazel by Google (see [.bazeliskrc](.bazeliskrc) for version)
 
 If using EcuC as Code:
 

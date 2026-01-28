@@ -3,8 +3,8 @@
 # Purpose: Bazel build rules for configuring ECUs using DaVinci Configurator Classic Version 6.
 # Author: Vector Informatik GmbH
 ###############################################################################
-bazel_dep(name = "rules_ecu_config", version = "1.0.3")
-bazel_dep(name = "rules_cfg6", version = "1.0.2")
+bazel_dep(name = "rules_ecu_config", version = "1.0.2")
+bazel_dep(name = "rules_cfg6", version = "1.0.1")
 
 # Import the BSW package as a local repository.
 bsw_pkg = use_repo_rule("//build-starter:helpers.bzl", "bsw_pkg")
