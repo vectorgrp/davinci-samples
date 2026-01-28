@@ -25,7 +25,7 @@
       "domain": "SystemExtractProject",
       "type": "Standard"
     },
-    "sipIds": ["CBD2400275_D03"],
+    "sipIds": ["<SipId>"],
     "syncJobRole": "None",
     "targetType": "Real Target",
     "useCases": []
