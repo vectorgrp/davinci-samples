@@ -9,6 +9,11 @@ This repository provides sample resources to help you integrate DaVinci Configur
 - **Ready-Set-Go-Scripts** demonstrating how DaVinci Configurator Classic Version 6 integrates into typical MICROSAR projects.
   - Create a new DaVinci project and link additional workspaces.
   - Project Import and Update
+- **Project-Migration**
+  - Tool Migration (DaVinci Configurator, DaVinci Developer, vVIRTUALtarget)
+  - BSW-Package Migration Trigger
+  - Diagnostic Import
+  - Store User Code Blocks
 - **Build-Starter** shows how to build and automate configurations using Bazel and modern build systems. You can leverage various Bazel rules depending on your build needs:
   - Create a new DaVinci Project or reuse an existing one
   - Execute EcuC-as-Code
@@ -19,8 +24,8 @@ This repository provides sample resources to help you integrate DaVinci Configur
 
 Always required:
 
--   Activated DaVinci Configurator Classic Version 6 License
--   A valid MICROSAR BSW package
+- Activated DaVinci Configurator Classic Version 6 License
+- A valid MICROSAR BSW package
 
 If using scripts:
 
@@ -38,11 +43,13 @@ If using EcuC as Code:
 ## 🚀 Getting Started
 
 1. Clone the repository:
+
     ```bash
     git clone https://github.com/vectorgrp/davinci-samples.git
     ```
+
 2. Explore the samples:
-   - Navigate to the folder that matches your use case.
+    - Navigate to the folder that matches your use case.
 3. Follow the instructions in each folder’s README to get started.
 
 ## 📂 Repository Structure
@@ -50,6 +57,7 @@ If using EcuC as Code:
 ```text
 davinci-samples/
  ├─ build-starter/         # Bazel-based project setup example
+ ├─ project-migration/     # Project migration template as example workflow
  ├─ ready-set-go-scripts/  # Ready-to-use scripts for quick workflow setup
  ├─ .bazelrc               # Bazel configuration file defining build options and settings
  ├─ .editorconfig          # Editor configuration for consistent coding styles across IDEs
