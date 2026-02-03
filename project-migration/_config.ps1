@@ -13,7 +13,7 @@ $bsw_package_r35 = ""
 # path to folder where the dvcfg-b.exe is located
 $cfg6_bridge = "" 
 
-# path to the developer cli: dvdevc.exe
+# path to the developer cli: dvdevc.exe (do not confuse with 'DaVinciDEV.exe')
 $dvdevc = "" 
 
 # path to the folder where the dpa file is located
@@ -22,7 +22,9 @@ $cfg5_project_dir = ""
 # path to the folder where the dvjson file will be created
 $cfg6_project_dir = "" 
 
-# project name (without extension!)
+# (dpa) project name (without extension!), 
+# this will also be the name of the dvcfg6 project 
+# (dvcfg_project_name='MyEcu' => [MyEcu.dpa -> MyEcu.dvjson])
 $dvcfg_project_name = "" 
 
 # vVirtualtarget: VttMake.exe
