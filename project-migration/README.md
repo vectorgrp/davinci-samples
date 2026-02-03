@@ -67,7 +67,9 @@ flowchart LR
 
 ## Tool Migration
 
-The tool migration is divided into the migration of DaVinci Configurator 6 (DvCfg6), DaVinci Developer (DvDev) and vVIRTUALtarget (VTT).
+The tool migration is divided into the migration of DaVinci Configurator 6 (DvCfg6), DaVinci Developer (DvDev), and vVIRTUALtarget (VTT).
+During the DvCfg6 migration, a new project folder containing the new project file [dvjson](https://help.vector.com/davinci-configurator-classic/en/current/dvcfg-classic/6.2-SP0/migration/pro-project-migration.html#_resulting_configuration_files_structure) is created. The name of the DvCfg6 project is derived from the DvCfg5 project (DPA name).
+The new project folder also follows a revised directory structure, which is described in more detail [here](https://help.vector.com/davinci-configurator-classic/en/current/dvcfg-classic/6.2-SP0/migration/pro-project-migration.html#_resulting_project_directory_structure). The content previously stored in the DPA file is now represented in the dvjson format and split across multiple JSON files. This results in significantly improved readability, easier tracking, and more efficient handling of configuration settings.
 
 In the context of DvDev, we refer more to a conversion rather than a migration. This conversion is necessary to prepare the entire project for the new interaction model between DvCfg6 and DvDev (for more information, see [Interactions with DaVinci Developer Classic](https://help.vector.com/davinci-configurator-classic/en/current/dvcfg-classic/6.2-SP0/migration/critical-changes.html#_interactions_with_davinci_developer_classic)). In the context of VTT, we refer to this step as an update (for more information, see [Update a vVIRTUALtarget Project or a VTTMAKE File](https://help.vector.com/vVIRTUALtarget/9.5/en/Help/Content/Topics/General/AUTOSARClassicECUs/vVIRTUALtargetMigrationDPAtoDVJSON.htm?Highlight=configurator%206)).
 
