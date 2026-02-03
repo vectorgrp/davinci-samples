@@ -11,7 +11,7 @@
 $bsw_package_r35 = ""
 
 # path to folder where the dvcfg-b.exe is located
-$cfg6_bridge = "" 
+$cfg6_evo1 = "" 
 
 # path to the developer cli: dvdevc.exe (do not confuse with 'DaVinciDEV.exe')
 $dvdevc = "" 
@@ -36,7 +36,7 @@ $vtt_make_project = ""
 #################################################################################################################
 # Example:
 # $bsw_package_r35 = "C:\SIP\CBDxxx\"
-# $cfg6_bridge = "D:\dev\dvcfg-6.2.1"
+# $cfg6_evo1 = "D:\dev\dvcfg-6.2.1"
 # $dvdevc = "C:\Program Files\Vector DaVinci Developer Classic 4.17.45 (SP2)\Bin\dvdevc.exe"
 # $cfg5_project_dir = "D:\My\CFG5\Project\"
 # $cfg6_project_dir = "D:\My\CFG6\Project\"
@@ -55,9 +55,9 @@ $vtt_make_project = ""
 #################################################################################################################
 
 # TOOLS
-$project_migration_tool = "$cfg6_bridge\migration\project-migration.exe"
-$cfg6 = "$cfg6_bridge\dvcfg-b.exe"
-$cfg6_gui = "$cfg6_bridge\dvcfgui-b\dvcfgui-b.exe"
+$project_migration_tool = "$cfg6_evo1\migration\project-migration.exe"
+$cfg6 = "$cfg6_evo1\dvcfg-b.exe"
+$cfg6_gui = "$cfg6_evo1\dvcfgui-b\dvcfgui-b.exe"
 $ddm = "$bsw_package_r35\Misc\DiagnosticToEcuconfig\Application\DiagnosticDataModifier.exe"
 $dvuct = "$bsw_package_r35\Misc\DaVinciUserCodeTool\Application\DvUCT.bat"
 
