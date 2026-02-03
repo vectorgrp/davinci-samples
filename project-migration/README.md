@@ -3,7 +3,9 @@
 This repository provides an example of what the migration of a DaVinci Configurator 5 (DvCfg5) project can look like.
 
 The steps described here do not represent a universal procedure for migrating any arbitrary DvCfg5 project. Some fundamental steps - such as tool or BSW package migration - can certainly be reused. However, additional or modified steps may be required depending on the specific project context.
-In particular, the migration of the BSW package (SIP) from R34 to R35 is only initiated here. The actual migration still needs to be performed manually as befoAll steps me> All steps mentioned here are described in more detail in the official tool documentation: [Documentation - DaVinci Configurator Classic 6](https://help.vector.com/davinci-configurator-classic/en/current/dvcfg-classic/6.2-SP0/index.html).
+In particular, the migration of the BSW package (SIP) from R34 to R35 is only initiated here. The actual migration still needs to be performed manually as before.
+
+> All steps mentioned here are described in more detail in the official tool documentation: [Documentation - DaVinci Configurator Classic 6](https://help.vector.com/davinci-configurator-classic/en/current/dvcfg-classic/6.2-SP0/index.html).
 
 ## 📦 What Does This Folder Contain?
 
