@@ -273,12 +273,12 @@
     "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_cc/0.2.0/MODULE.bazel": "not found",
     "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_cc/0.2.13/MODULE.bazel": "not found",
     "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_cfg6/1.0.0/MODULE.bazel": "943caf4374d16c379c61a29e6fdcd496e2e5cbc63189767812cf2bf0a4a15da3",
-    "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_cfg6/1.0.2/MODULE.bazel": "0498c247ab75f167573fc109736974ec18df93619d8fbee6717c3d269f1c2a5c",
-    "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_cfg6/1.0.2/source.json": "69f4820c49922a23b2f9455f3afe5a29cd72649d8f5390779a29f16e906ac11a",
+    "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_cfg6/1.0.3/MODULE.bazel": "57dc49a85a6069b48cd5b552647d857c98f7924bbd874f54300a5c7c73bc606d",
+    "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_cfg6/1.0.3/source.json": "755c327aec3178b4003e4acf6db9c64fe77e698499f2f63cba874052b21a67bd",
     "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_dvarjson/1.0.0/MODULE.bazel": "8c1bb0a2ab02988a66c450b90bd639e456d1bdab18202c47803cb3f6565c46f2",
     "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_dvarjson/1.0.0/source.json": "756df1a1299074e63886427cb2dbf65dd5f4fb60345becb38f9096abf6112a62",
-    "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_ecu_config/1.0.3/MODULE.bazel": "21f7fd6157f10522736b04182151b5792183c113b8161423e7e1afeb41bc8b5b",
-    "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_ecu_config/1.0.3/source.json": "dc72f0a31b85976c75576781e987a4adfcd6f8792bb4ddddf77cb927649fef75",
+    "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_ecu_config/1.0.4/MODULE.bazel": "ee7861ba49b20ac7fd97fbf817a011f2cf6b7ff5714331d6335fc6ea8fdbce43",
+    "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_ecu_config/1.0.4/source.json": "a0ecb9fc62df02c03b091a22da769f6559bbe9a7f14240b522ff9d86b5c64f0d",
     "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_foreign_cc/0.9.0/MODULE.bazel": "not found",
     "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_fuzzing/0.5.2/MODULE.bazel": "not found",
     "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_java/4.0.0/MODULE.bazel": "not found",
@@ -496,7 +496,7 @@
     },
     "@@rules_ecu_config+//:ecu_config.bzl%ecu_config": {
       "general": {
-        "bzlTransitiveDigest": "Ena+RcUu6fIBXmtlFEh7utJ2M53jcCSmuYlbdvBSmAA=",
+        "bzlTransitiveDigest": "PC7fr90VS1PDFtVYg5/q6Dg4UAWKo2p2UwyZ9pRmBMY=",
         "usagesDigest": "vHhJdwP8G3yuJfrMrXLXlqn8iZF2lpOrVldJUVziUYk=",
         "recordedFileInputs": {
           "@@//build-starter/project-creation/project-creation.json": "31954d185722bc196832e4f124d866fec4f086d24435855f213fcc0b8d8bf5e5"
