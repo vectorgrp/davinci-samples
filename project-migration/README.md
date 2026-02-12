@@ -170,7 +170,8 @@ flowchart TD
 
 The BSW package migration in the GUI works the same way as it did in DvCfg5.
 To enable the diagnostic import afterwards, the following steps must be executed:
-[BSW-Package migration 1](_images/sip_migration_1.png), [BSW-Package migration 2](_images/sip_migration_2.png) and [BSW-Package migration 3](_images/sip_migration_3.png). If in the following project load an error pops up, it is recommended to check the Output\Log\ProjectLoad\ModelMergeReport.sarif file. These errors are mostly merge errors caused by AUTOSAR elements being defined in multiple files.
+[BSW-Package migration 1](_images/sip_migration_1.png), [BSW-Package migration 2](_images/sip_migration_2.png) and [BSW-Package migration 3](_images/sip_migration_3.png). If in the following project load an error pops up, it is recommended to check the Output\Log\ProjectLoad\ModelMergeReport.sarif file. These errors are mostly merge errors caused by AUTOSAR elements being defined in multiple files. The recommendation is to solve these conflicts manually to make sure everything is merged correct. A description on how to do this is given in the documentation: [Model Merge Behavior on Project Load](https://help.vector.com/davinci-configurator-classic/en/current/dvcfg-classic/6.2.3-SP2/configuration/projects/model-merge-on-project-load.html). In general it is also possible to solve the conflicts with the setting _"allowMergeConflicts": true_. If using this option it is still required to check the merge results to make sure all decisions were made correct.
+
 After completing these steps, the BSW package migration is triggered, and the next step in the workflow can be executed.
 
 > For more information, see [Migrating Project to Newer BSW Package](https://help.vector.com/davinci-configurator-classic/en/current/dvcfg-classic/6.2-SP0/migration/bsw-migration.html)
