@@ -7,8 +7,8 @@ Welcome to **DaVinci Samples**, an open-source repository designed to help devel
 This repository provides sample resources to help you integrate DaVinci Configurator Classic Version 6 workflows:
 
 - **Ready-Set-Go-Scripts** demonstrating how DaVinci Configurator Classic Version 6 integrates into typical MICROSAR projects.
-    - Create a new DaVinci project and link additional workspaces.
-    - Project Import and Update
+    - **davinci-workspace-setup**: Create a new DaVinci Project and link additional workspaces. Execute project import and update.
+    - **project-migration**: Project migration template as example workflow.
 - **Project-Migration**
     - Tool Migration (DaVinci Configurator, DaVinci Developer, vVIRTUALtarget)
     - BSW-Package Migration Trigger
