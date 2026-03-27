@@ -223,6 +223,8 @@
     "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/bazel_skylib/1.7.1/MODULE.bazel": "not found",
     "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/bazel_skylib/1.8.1/MODULE.bazel": "not found",
     "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/buildozer/7.1.2/MODULE.bazel": "not found",
+    "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/dvcfg6/6.2.5/MODULE.bazel": "5ba9534cf06e8c941613bef18882fb7af23af3f24885e3ea156bea0c4873bf98",
+    "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/dvcfg6/6.2.5/source.json": "2e575d2c49f1437cc89deb368ca735ee8c150419733b670f6f6b38380985db5d",
     "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/google_benchmark/1.8.2/MODULE.bazel": "not found",
     "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/googletest/1.11.0/MODULE.bazel": "not found",
     "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/googletest/1.14.0.bcr.1/MODULE.bazel": "not found",
@@ -272,13 +274,13 @@
     "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_cc/0.1.1/MODULE.bazel": "not found",
     "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_cc/0.2.0/MODULE.bazel": "not found",
     "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_cc/0.2.13/MODULE.bazel": "not found",
-    "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_cfg6/1.0.0/MODULE.bazel": "943caf4374d16c379c61a29e6fdcd496e2e5cbc63189767812cf2bf0a4a15da3",
-    "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_cfg6/1.0.3/MODULE.bazel": "57dc49a85a6069b48cd5b552647d857c98f7924bbd874f54300a5c7c73bc606d",
-    "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_cfg6/1.0.3/source.json": "755c327aec3178b4003e4acf6db9c64fe77e698499f2f63cba874052b21a67bd",
-    "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_dvarjson/1.0.0/MODULE.bazel": "8c1bb0a2ab02988a66c450b90bd639e456d1bdab18202c47803cb3f6565c46f2",
-    "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_dvarjson/1.0.0/source.json": "756df1a1299074e63886427cb2dbf65dd5f4fb60345becb38f9096abf6112a62",
-    "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_ecu_config/1.0.4/MODULE.bazel": "ee7861ba49b20ac7fd97fbf817a011f2cf6b7ff5714331d6335fc6ea8fdbce43",
-    "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_ecu_config/1.0.4/source.json": "a0ecb9fc62df02c03b091a22da769f6559bbe9a7f14240b522ff9d86b5c64f0d",
+    "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_cfg6/2.0.0/MODULE.bazel": "13511e456e2baf4bcdbf175c0f29f377bf5f7cd78b0fe74f89c78c2dfc2c49bb",
+    "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_cfg6/2.0.1/MODULE.bazel": "9632e2fdd85aa1fa6fc67fd1fa7ce68eeead328b7b1c750f5f56d278ab312cbe",
+    "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_cfg6/2.0.1/source.json": "bd91d671b52c410f5773bc8325641f6aa8c193c07a0b71beee23b48dad237353",
+    "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_dvarjson/1.1.0/MODULE.bazel": "0bb78c4666cb3b4c27fa4c10b197ac8a64a7223409e48d2d4197a9cc0d53c495",
+    "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_dvarjson/1.1.0/source.json": "303ab5215d6b8a8fc34afc62ba72d1bedeb811e03d69129542a4d16e61e29476",
+    "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_ecu_config/2.0.1/MODULE.bazel": "941a0395e03df5e6a9e10c0c2fd7ecaac2b9f73a896b638210f1691511d6675b",
+    "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_ecu_config/2.0.1/source.json": "cfc3284f3a376747b6149e41b91d04fe3635d768a00ef04862362bc76cd35089",
     "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_foreign_cc/0.9.0/MODULE.bazel": "not found",
     "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_fuzzing/0.5.2/MODULE.bazel": "not found",
     "https://raw.githubusercontent.com/vectorgrp/bazel-registry/main/modules/rules_java/4.0.0/MODULE.bazel": "not found",
@@ -344,6 +346,180 @@
   },
   "selectedYankedVersions": {},
   "moduleExtensions": {
+    "@@dvcfg6+//:ecu_config.bzl%ecu_config": {
+      "general": {
+        "bzlTransitiveDigest": "ixGIYq9t1QB/FN5+z2c2fsHaj1dkk5Kji75ifsHqTJk=",
+        "usagesDigest": "bYr/oBfPsPuKQT6eszeQR7NiEVbBjpzRIGhfKfP6cFY=",
+        "recordedFileInputs": {},
+        "recordedDirentsInputs": {},
+        "envVariables": {},
+        "generatedRepoSpecs": {
+          "ComDiag": {
+            "repoRuleId": "@@rules_ecu_config+//:rules.bzl%ecu_config_repo",
+            "attributes": {
+              "cfg6_defs": "@@dvcfg6++_repo_rules+cfg6//:defs.bzl",
+              "bsw_pkg": "@@+_repo_rules+bsw_package//:folder",
+              "dvjson": "@@//build-starter/com-diag:dvcfg6-project/ComDiag.dvjson",
+              "project_archive_dvjson": "",
+              "project_archive_type": "",
+              "evs": [],
+              "extract": [],
+              "modules": [],
+              "diag_modules": [],
+              "update_switches": "",
+              "as_code": []
+            }
+          },
+          "eac": {
+            "repoRuleId": "@@rules_ecu_config+//:rules.bzl%ecu_config_repo",
+            "attributes": {
+              "cfg6_defs": "@@dvcfg6++_repo_rules+cfg6//:defs.bzl",
+              "bsw_pkg": "@@+_repo_rules+bsw_package//:folder",
+              "dvjson": "@@//build-starter/eac:dvcfg6-project/eac.dvjson",
+              "project_archive_dvjson": "",
+              "project_archive_type": "",
+              "evs": [],
+              "extract": [],
+              "modules": [],
+              "diag_modules": [],
+              "update_switches": "",
+              "as_code": [
+                "@@//build-starter/eac:MyFirstEac",
+                "@@//build-starter/eac:MySecondEac"
+              ]
+            }
+          },
+          "MyProject": {
+            "repoRuleId": "@@rules_ecu_config+//:rules.bzl%ecu_config_repo",
+            "attributes": {
+              "cfg6_defs": "@@dvcfg6++_repo_rules+cfg6//:defs.bzl",
+              "bsw_pkg": "@@+_repo_rules+bsw_package//:folder",
+              "creation_file": "@@//build-starter/project-creation:project-creation.json",
+              "project_archive_dvjson": "",
+              "project_archive_type": "",
+              "evs": [],
+              "extract": [],
+              "modules": [],
+              "diag_modules": [],
+              "update_switches": "",
+              "as_code": []
+            }
+          }
+        },
+        "recordedRepoMappingEntries": [
+          [
+            "",
+            "bsw_package",
+            "+_repo_rules+bsw_package"
+          ],
+          [
+            "bazel_features+",
+            "bazel_features_globals",
+            "bazel_features++version_extension+bazel_features_globals"
+          ],
+          [
+            "bazel_features+",
+            "bazel_features_version",
+            "bazel_features++version_extension+bazel_features_version"
+          ],
+          [
+            "dvcfg6+",
+            "rules_ecu_config",
+            "rules_ecu_config+"
+          ],
+          [
+            "protobuf+",
+            "proto_bazel_features",
+            "bazel_features+"
+          ],
+          [
+            "protobuf+",
+            "rules_java",
+            "rules_java+"
+          ],
+          [
+            "rules_cc+",
+            "bazel_skylib",
+            "bazel_skylib+"
+          ],
+          [
+            "rules_cc+",
+            "bazel_tools",
+            "bazel_tools"
+          ],
+          [
+            "rules_cc+",
+            "cc_compatibility_proxy",
+            "rules_cc++compatibility_proxy+cc_compatibility_proxy"
+          ],
+          [
+            "rules_cc+",
+            "rules_cc",
+            "rules_cc+"
+          ],
+          [
+            "rules_cc++compatibility_proxy+cc_compatibility_proxy",
+            "rules_cc",
+            "rules_cc+"
+          ],
+          [
+            "rules_cfg6+",
+            "rules_java",
+            "rules_java+"
+          ],
+          [
+            "rules_cfg6+",
+            "rules_shell",
+            "rules_shell+"
+          ],
+          [
+            "rules_ecu_config+",
+            "bazel_tools",
+            "bazel_tools"
+          ],
+          [
+            "rules_ecu_config+",
+            "rules_cfg6",
+            "rules_cfg6+"
+          ],
+          [
+            "rules_java+",
+            "bazel_features",
+            "bazel_features+"
+          ],
+          [
+            "rules_java+",
+            "bazel_skylib",
+            "bazel_skylib+"
+          ],
+          [
+            "rules_java+",
+            "bazel_tools",
+            "bazel_tools"
+          ],
+          [
+            "rules_java+",
+            "com_google_protobuf",
+            "protobuf+"
+          ],
+          [
+            "rules_java+",
+            "compatibility_proxy",
+            "rules_java++compatibility_proxy+compatibility_proxy"
+          ],
+          [
+            "rules_java+",
+            "rules_cc",
+            "rules_cc+"
+          ],
+          [
+            "rules_java++compatibility_proxy+compatibility_proxy",
+            "rules_java",
+            "rules_java+"
+          ]
+        ]
+      }
+    },
     "@@pybind11_bazel+//:internal_configure.bzl%internal_configure_extension": {
       "general": {
         "bzlTransitiveDigest": "uxP2cZuW027Q8wpZbeJeuW5MXcNBO8GcOK/LNN2sPvQ=",
@@ -490,190 +666,6 @@
             "rules_apple+",
             "bazel_tools",
             "bazel_tools"
-          ]
-        ]
-      }
-    },
-    "@@rules_ecu_config+//:ecu_config.bzl%ecu_config": {
-      "general": {
-        "bzlTransitiveDigest": "PC7fr90VS1PDFtVYg5/q6Dg4UAWKo2p2UwyZ9pRmBMY=",
-        "usagesDigest": "vHhJdwP8G3yuJfrMrXLXlqn8iZF2lpOrVldJUVziUYk=",
-        "recordedFileInputs": {
-          "@@//build-starter/project-creation/project-creation.json": "31954d185722bc196832e4f124d866fec4f086d24435855f213fcc0b8d8bf5e5"
-        },
-        "recordedDirentsInputs": {},
-        "envVariables": {},
-        "generatedRepoSpecs": {
-          "cfg6": {
-            "repoRuleId": "@@rules_cfg6+//:rules.bzl%cfg6_archive",
-            "attributes": {
-              "url": "https://packages.vehub.vector.com/apt/pool/generic/vector-davinci-configurator-classic/6.2.1/vector-davinci-configurator-classic-6.2.1.deb",
-              "sha256": "1D676D52E4A649AFA78D8C9482730E66A94472241D54D3ADBC0F82BB25E77E82"
-            }
-          },
-          "dvarjson": {
-            "repoRuleId": "@@rules_dvarjson+//:rules.bzl%dvarjson_archive",
-            "attributes": {
-              "url": "https://packages.vehub.vector.com/apt/pool/generic/vector-davinci-autosar-json/1.1.0/vector-dvarjson-1.1.0-amd64.deb",
-              "sha256": "38D3E30EF6092C31D2F0E37747130684DFC77C4E8E94850D0FEA326BF8B7706F"
-            }
-          },
-          "ComDiag": {
-            "repoRuleId": "@@rules_ecu_config+//:rules.bzl%ecu_config_repo",
-            "attributes": {
-              "cfg6_defs": "@@rules_ecu_config++ecu_config+cfg6//:defs.bzl",
-              "bsw_pkg": "@@+_repo_rules+bsw_package//:folder",
-              "dvjson": "@@//build-starter/com-diag:dvcfg6-project/ComDiag.dvjson",
-              "evs": [],
-              "extract": [],
-              "modules": [],
-              "diag_modules": [],
-              "update_switches": "",
-              "as_code": []
-            }
-          },
-          "eac": {
-            "repoRuleId": "@@rules_ecu_config+//:rules.bzl%ecu_config_repo",
-            "attributes": {
-              "cfg6_defs": "@@rules_ecu_config++ecu_config+cfg6//:defs.bzl",
-              "bsw_pkg": "@@+_repo_rules+bsw_package//:folder",
-              "dvjson": "@@//build-starter/eac:dvcfg6-project/eac.dvjson",
-              "evs": [],
-              "extract": [],
-              "modules": [],
-              "diag_modules": [],
-              "update_switches": "",
-              "as_code": [
-                "@@//build-starter/eac:MyFirstEac",
-                "@@//build-starter/eac:MySecondEac"
-              ]
-            }
-          },
-          "MyProject": {
-            "repoRuleId": "@@rules_ecu_config+//:rules.bzl%ecu_config_repo",
-            "attributes": {
-              "cfg6_defs": "@@rules_ecu_config++ecu_config+cfg6//:defs.bzl",
-              "bsw_pkg": "@@+_repo_rules+bsw_package//:folder",
-              "creation_file": "@@//build-starter/project-creation:project-creation.json",
-              "evs": [],
-              "extract": [],
-              "modules": [],
-              "diag_modules": [],
-              "update_switches": "",
-              "as_code": []
-            }
-          }
-        },
-        "recordedRepoMappingEntries": [
-          [
-            "",
-            "bsw_package",
-            "+_repo_rules+bsw_package"
-          ],
-          [
-            "bazel_features+",
-            "bazel_features_globals",
-            "bazel_features++version_extension+bazel_features_globals"
-          ],
-          [
-            "bazel_features+",
-            "bazel_features_version",
-            "bazel_features++version_extension+bazel_features_version"
-          ],
-          [
-            "protobuf+",
-            "proto_bazel_features",
-            "bazel_features+"
-          ],
-          [
-            "protobuf+",
-            "rules_java",
-            "rules_java+"
-          ],
-          [
-            "rules_cc+",
-            "bazel_skylib",
-            "bazel_skylib+"
-          ],
-          [
-            "rules_cc+",
-            "bazel_tools",
-            "bazel_tools"
-          ],
-          [
-            "rules_cc+",
-            "cc_compatibility_proxy",
-            "rules_cc++compatibility_proxy+cc_compatibility_proxy"
-          ],
-          [
-            "rules_cc+",
-            "rules_cc",
-            "rules_cc+"
-          ],
-          [
-            "rules_cc++compatibility_proxy+cc_compatibility_proxy",
-            "rules_cc",
-            "rules_cc+"
-          ],
-          [
-            "rules_cfg6+",
-            "rules_java",
-            "rules_java+"
-          ],
-          [
-            "rules_cfg6+",
-            "rules_shell",
-            "rules_shell+"
-          ],
-          [
-            "rules_ecu_config+",
-            "bazel_tools",
-            "bazel_tools"
-          ],
-          [
-            "rules_ecu_config+",
-            "rules_cfg6",
-            "rules_cfg6+"
-          ],
-          [
-            "rules_ecu_config+",
-            "rules_dvarjson",
-            "rules_dvarjson+"
-          ],
-          [
-            "rules_java+",
-            "bazel_features",
-            "bazel_features+"
-          ],
-          [
-            "rules_java+",
-            "bazel_skylib",
-            "bazel_skylib+"
-          ],
-          [
-            "rules_java+",
-            "bazel_tools",
-            "bazel_tools"
-          ],
-          [
-            "rules_java+",
-            "com_google_protobuf",
-            "protobuf+"
-          ],
-          [
-            "rules_java+",
-            "compatibility_proxy",
-            "rules_java++compatibility_proxy+compatibility_proxy"
-          ],
-          [
-            "rules_java+",
-            "rules_cc",
-            "rules_cc+"
-          ],
-          [
-            "rules_java++compatibility_proxy+compatibility_proxy",
-            "rules_java",
-            "rules_java+"
           ]
         ]
       }

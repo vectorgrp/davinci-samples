@@ -4,11 +4,7 @@
 # Author: Vector Informatik GmbH
 ###############################################################################
 
-# Rules for preparing project input files.
-load("@rules_cfg6//:defs.bzl", "merged_extract", "replace_modules", "system_extract")
-
-# Project specific rules.
-load("@ComDiag//:defs.bzl", "generate")
+load("@rules_cfg6//:defs.bzl", "merged_extract", "replace_modules", "system_extract", "generate")
 
 exports_files(["dvcfg6-project/ComDiag.dvjson"])
 
@@ -37,6 +33,7 @@ exports_files(["dvcfg6-project/ComDiag.dvjson"])
 # Generate the code.
 generate(
     name = "code",
+    upstream = "@ComDiag//:project",
     # Restrict the modules to generate code for using the optional modules and/or excluded attributes.
     modules = [],
     excluded = [],

@@ -4,11 +4,11 @@
 # Author: Vector Informatik GmbH
 ###############################################################################
 
-# Rules for preparing project input files.
-load("@rules_cfg6//:defs.bzl", "as_code_eac", "merged_extract", "replace_modules", "system_extract")
+# General rules.
+load("@rules_cfg6//:defs.bzl", "as_code_eac", "merged_extract", "replace_modules", "system_extract", "generate")
 
 # Project specific rules.
-load("@eac//:defs.bzl", "eac_jar", "generate")
+load("@eac//:defs.bzl", "eac_jar")
 
 exports_files(["dvcfg6-project/eac.dvjson"])
 
@@ -38,12 +38,10 @@ exports_files(["dvcfg6-project/eac.dvjson"])
 eac_jar(
     name = "MyFirstEac",
     srcs = ["src/MyFirstEac.java"],
-    allow_beta_api = True,
 )
 eac_jar(
     name = "MySecondEac",
     srcs = ["src/MySecondEac.java"],
-    allow_beta_api = True,
 )
 
 # Use pre-built EaC jars.
@@ -55,6 +53,7 @@ eac_jar(
 # Generate the code.
 generate(
     name = "code",
+    upstream = "@eac//:project",
     # Restrict the modules to generate code for using the optional modules and/or excluded attributes.
     modules = [],
     excluded = [],

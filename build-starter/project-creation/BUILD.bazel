@@ -4,11 +4,7 @@
 # Author: Vector Informatik GmbH
 ###############################################################################
 
-# Rules for preparing project input files.
-load("@rules_cfg6//:defs.bzl", "merged_extract", "replace_modules", "system_extract")
-
-# Project specific rules.
-load("@MyProject//:defs.bzl", "generate")
+load("@rules_cfg6//:defs.bzl", "merged_extract", "replace_modules", "system_extract", "generate")
 
 # Extract an ECU from a system description.
 # system_extract(
@@ -35,6 +31,7 @@ load("@MyProject//:defs.bzl", "generate")
 # Generate the code.
 generate(
     name = "code",
+    upstream = "@MyProject//:project",
     # Restrict the modules to generate code for using the optional modules and/or excluded attributes.
     modules = [],
     excluded = [],
