@@ -8,12 +8,6 @@ This repository provides sample resources to help you integrate DaVinci Configur
 
 - **Ready-Set-Go-Scripts** demonstrating how DaVinci Configurator Classic Version 6 integrates into typical MICROSAR projects.
     - **davinci-workspace-setup**: Create a new DaVinci Project and link additional workspaces. Execute project import and update.
-    - **project-migration**: Project migration template as example workflow.
-- **Project-Migration**
-    - Tool Migration (DaVinci Configurator, DaVinci Developer, vVIRTUALtarget)
-    - BSW-Package Migration Trigger
-    - Diagnostic Import
-    - Store User Code Blocks
 - **Build-Starter** shows how to build and automate configurations using Bazel and modern build systems. You can leverage various Bazel rules depending on your build needs:
     - Create a new DaVinci Project or reuse an existing one
     - Execute EcuC-as-Code
