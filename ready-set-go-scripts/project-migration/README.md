@@ -7,6 +7,14 @@ With the release of **DaVinci Configurator Classic 6.3**, we introduced a new to
 The **dvassistant** has fully taken over the functionality previously provided by the scripts in this folder.  
 As a result, these scripts have been **removed**.
 
+DaVinci Assistant is a CLI Tool that provides a guided migration process that walks you through the following migration steps:
+
+- Update Project Structure
+- Update BSW Package
+- Update Data Files
+- Update User Code Blocks
+- Update Tool Links
+
 ### ✅ Why dvassistant?
 
 Using **dvassistant**, migrations can now be executed:
