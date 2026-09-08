@@ -8,11 +8,6 @@ This repository provides sample resources to help you integrate DaVinci Configur
 
 - **Ready-Set-Go-Scripts** demonstrating how DaVinci Configurator Classic Version 6 integrates into typical MICROSAR projects.
     - **davinci-workspace-setup**: Create a new DaVinci Project and link additional workspaces. Execute project import and update.
-- **Build-Starter** shows how to build and automate configurations using Bazel and modern build systems. You can leverage various Bazel rules depending on your build needs:
-    - Create a new DaVinci Project or reuse an existing one
-    - Execute EcuC-as-Code
-    - Project Import and Update
-    - Validate and generate the DaVinci Project
 
 ## 🛠 Requirements
 
@@ -25,14 +20,6 @@ If using scripts:
 
 - DaVinci Developer Classic (Release 4.17 SP2 or newer)
 - DaVinci Team (Release 6.2 or newer)
-
-If using pipelines (if using Bazel):
-
-- Bazel by Google (see [.bazeliskrc](.bazeliskrc) for version)
-
-If using EcuC as Code:
-
-- EcuC-As-Code Development Kit
 
 ## 🚀 Getting Started
 
@@ -50,14 +37,10 @@ If using EcuC as Code:
 
 ```text
 davinci-samples/
- ├─ build-starter/         # Bazel-based project setup example
  ├─ ready-set-go-scripts/  # Ready-to-use scripts for quick workflow setup
- ├─ .bazelrc               # Bazel configuration file defining build options and settings
  ├─ .editorconfig          # Editor configuration for consistent coding styles across IDEs
  ├─ .gitignore             # Specifies files and directories to be ignored by Git
  ├─ LICENSE                # License information
- ├─ MODULE.bazel           # Bazel module definition for dependency management
- ├─ MODULE.bazel.lock      # Lock file for Bazel module dependencies to ensure reproducible builds
  ├─ README.md              # Main documentation for the repository
  └─ SECURITY.md            # Security policy
 ```
