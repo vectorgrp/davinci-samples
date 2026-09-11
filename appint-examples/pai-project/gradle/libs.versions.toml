@@ -1,0 +1,10 @@
+[plugins]
+automationPlugin = { id = "com.vector.cfg.pai.automation-build-gradle", version = "1.5.3" }
+kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version = "2.3.0" }
+kotlinSamWithReceiver = { id = "org.jetbrains.kotlin.plugin.sam.with.receiver", version = "2.3.0" }
+
+[libraries]
+junitBom = { group = "org.junit", name = "junit-bom", version = "5.14.4" }
+junitApi = { group = "org.junit.jupiter", name = "junit-jupiter-api" }
+junitEngine = { group = "org.junit.jupiter", name = "junit-jupiter-engine" }
+junitPlatformLauncher = { group = "org.junit.platform", name = "junit-platform-launcher" }
