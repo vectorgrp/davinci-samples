@@ -1,0 +1,10 @@
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Kotlin
+.kotlin/
+
+# IDE (already covered at repo root, kept here for standalone use)
+.idea/

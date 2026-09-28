@@ -1,0 +1,44 @@
+import com.vector.dvt.ci.wf.tasks.helper.CustomScriptTask
+
+plugins {
+	id 'com.vector.dvt.ci.vttintegration' version '22.+'
+}
+
+tasks.register("appIntConfigureEcuStateManagement", CustomScriptTask) {
+    group = 'custom'
+    addCustomScriptTask 'configureEcuStateManagement'
+    customScriptDirectories = ['../pai-project/build/libs']
+    inputWorkspace = configureWatchdogManagement.outputZip
+    configurator = dvtWorkflow.configurator
+    bswPackage = dvtWorkflow.bswPackage
+}
+
+tasks.register("appIntConfigureDiagStack", CustomScriptTask) {
+    group = 'custom'
+    addCustomScriptTask 'configureDiagStack'
+    customScriptDirectories = ['../pai-project/build/libs']
+    inputWorkspace = appIntConfigureEcuStateManagement.outputZip
+    configurator = dvtWorkflow.configurator
+    bswPackage = dvtWorkflow.bswPackage
+}
+
+tasks.named("setInitValues"){
+    inputWorkspace = appIntConfigureDiagStack.outputZip
+}
+
+tasks.register("appIntConfigureMemStack", CustomScriptTask) {
+    group = 'custom'
+    addCustomScriptTask 'configureMemStack'
+    customScriptDirectories = ['../pai-project/build/libs']
+    inputWorkspace = setInitValues.outputZip
+    configurator = dvtWorkflow.configurator
+    bswPackage = dvtWorkflow.bswPackage
+}
+
+tasks.named("serviceSwcTaskMappingConstraints"){
+    inputWorkspace = appIntConfigureMemStack.outputZip
+}
+
+tasks.named("serviceSwcTaskMapping"){
+    inputWorkspace = appIntConfigureMemStack.outputZip
+}
