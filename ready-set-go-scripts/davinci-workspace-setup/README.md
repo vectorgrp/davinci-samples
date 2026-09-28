@@ -1,46 +1,37 @@
-# Ready-Set-Go-Script DaVinci Workspace Setup
+# 📦 DaVinci Workspace Setup (Deprecated)
 
-- **DaVinci_WorkspaceSetup.bat** sets up and links DaVinci workspaces, and executes input file processing and updates.
+With the release of **DaVinci Configurator Classic 6.3**, we introduced a new tool called **DaVinci Assistant**.
 
-    This script automates the creation and setup of DaVinci projects using both DaVinci Configurator Classic and DaVinci Developer Classic.
-    It ensures workspaces exist or creates them, links CFG6 and DEV workspaces, analyzes input files with EcuXPro derives ECU configuration, and updates the CFG6 project automatically.
-    Note: This script is for a non-variant project only!
+## 🚀 DaVinci Assistant
 
-    ```mermaid
-    flowchart TB
-    subgraph B["Step 1: Store variables"]
-      B1["Step 1.1: Ask user for tool installation paths"]
-      B2["Step 1.2: Project specifics"]
-      B3["Step 1.3: Tool-specific variables"]
-      B1 --> B2 --> B3
-    end
-    subgraph C["Step 2: Check workspaces"]
-      C1["Ask for CFG6 workspace"]
-      C2["Ask for DEV workspace"]
-    end
-    A["Step 0: Initialize logging"] --> B
-    B --> C
-    C --> |"Workspaces do not exist "|D["Step 3: Create missing workspaces/projects"]
-    C --> |"Workspaces exist"|E
-    D --> E["Step 4: Convert and link DEV workspace to CFG6 workspace"]
-    E --> F["Step 5: Add DEV workspace reference to General.json"]
-    F --> G["Step 6: Analyze input files with EcuXPro"]
-    G --> H["Step 7: Execute extractSystemDesc.bat after path update"]
-    H --> I["Step 8: Derive ECUC from MergedECUExtract.arxml"]
-    I --> J["Step 9: Project update"]
-    J --> K["Step 10: Log completion"]
-    ```
+The **dvassistant** has fully taken over the functionality previously provided by the script in this folder.  
+As a result, the script has been **removed**.
 
-## 🚀 Getting Started with DaVinci_WorkspaceSetup.bat
+DaVinci Assistant is a CLI Tool that covers the complete workspace setup:
 
-1. Set variables in Step 1 as needed.
-2. Run the script by double-clicking or executing via command line.
-3. Check the output (Log file: Output_Log.txt).
+- **Create a Project** (`dv-assistant.exe create`): Create a new DaVinci Project from your BSW Package, including an optional DaVinci Developer Classic workspace and vVIRTUALtarget project linked to it.
+- **Update a Project** (`dv-assistant.exe update`): Import new or changed input files (ARXML, DBC, LDF, FIBEX, CDD, VSDE) into an existing project and derive the ECU configuration from them.
 
-## 🪄 Tips
+### ✅ Why dvassistant?
 
-- Always verify that installation paths are correct before running the script.
-- Enclose paths in double quotes to handle spaces.
-- Use the log file (Output_Log.txt) to debug any issues.
-- This script assumes a basic understanding of AUTOSAR and DaVinci project structure.
-- This script assumes either no CFG6 and/or DEV workspaces exist beforehand OR that the existing workspaces have never been linked before
+Using **dvassistant**, workspaces can now be set up:
+
+- with a **clean and user-friendly interface**
+- in a **more automated and reliable way**
+- with **improved user handling** compared to the legacy script
+
+## 📖 Documentation
+
+For further details, usage instructions, and examples, please refer to the official documentation:
+
+👉 **[DaVinci Assistant - Documentation](https://help.vector.com/davinci-configurator-classic/en/latest/user-manual/tools/davinci-assistant/index.html)**
+
+- [Create a Project](https://help.vector.com/davinci-configurator-classic/en/latest/user-manual/tools/davinci-assistant/index.html#create-a-project)
+- [Update a Project](https://help.vector.com/davinci-configurator-classic/en/latest/user-manual/tools/davinci-assistant/index.html#_update_a_project)
+
+---
+
+> ⚠️ **Note**  
+> This folder is kept for reference purposes only.  
+> Please use **dvassistant** for all future workspace setups.  
+> This folder will be removed completely in the future.

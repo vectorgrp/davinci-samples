@@ -7,8 +7,6 @@ Welcome to **DaVinci Samples**, an open-source repository designed to help devel
 This repository provides sample resources to help you integrate DaVinci Configurator Classic Version 6 workflows:
 
 - **AppInt-Examples** shows you how to use the Application Integration Library in an Automation Interface project and in a DaVinci Application Integration (former DaVinci Team) pipeline
-- **Ready-Set-Go-Scripts** demonstrating how DaVinci Configurator Classic Version 6 integrates into typical MICROSAR projects.
-    - **davinci-workspace-setup**: Create a new DaVinci Project and link additional workspaces. Execute project import and update.
 
 ## 🛠 Requirements
 
@@ -39,7 +37,7 @@ If using scripts:
 ```text
 davinci-samples/
  ├─ appint-examples/       # Example Automation Interface project and DaVinci Application Integration setup using the Application Integration Library
- ├─ ready-set-go-scripts/  # Ready-to-use scripts for quick workflow setup
+ ├─ ready-set-go-scripts/  # Deprecated: superseded by DaVinci Assistant, will be removed in the future
  ├─ .editorconfig          # Editor configuration for consistent coding styles across IDEs
  ├─ .gitignore             # Specifies files and directories to be ignored by Git
  ├─ LICENSE                # License information
