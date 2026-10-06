@@ -34,3 +34,4 @@ For further details, usage instructions, and examples, please refer to the offic
 > ⚠️ **Note**  
 > This repository is kept for reference purposes only.  
 > Please use **dvassistant** for all future migrations.
+> This folder will be removed completely in the future.
