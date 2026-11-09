@@ -2,7 +2,7 @@ import com.vector.cfg.automation.scripting.api.IScriptCreationApi
 import com.vector.cfg.automation.scripting.api.IScriptFactory
 import com.vector.cfg.automation.scripting.api.IScriptTaskTypeApi.DV_PROJECT
 import com.vector.cfg.model.pai.api.transaction
-import com.vector.ecusdk.appint.base.withAliasView
+import com.vector.ecusdk.appint.base.replaceValuesByAlias
 import com.vector.ecusdk.appint.nvm.*
 
 class ConfigureMemStack : IScriptFactory {
@@ -16,18 +16,11 @@ class ConfigureMemStack : IScriptFactory {
                     globalConfig = MemStackConfig.GlobalConfig(),
 
                     //TODO replace with instructions matching your needs
-                    nvBlockDescriptors = collectNvBlockDescriptors(project, logger).withAliasView({ it.name }) { view ->
-                        view.instruct(
-                            "ControlNvData_NvDescriptor", MemStackConfig.NvMInstruction(
-                                writingPriority = 10
-                            )
-                        )
-                        view.instruct(
-                            "CodingParameters_NvDescriptor", MemStackConfig.NvMInstruction(
-                                writingPriority = 7
-                            )
-                        )
-                    },
+                    nvBlockDescriptors = collectNvBlockDescriptors(project, logger).replaceValuesByAlias(
+                        { it.name },
+                        "ControlNvData_NvDescriptor" to MemStackConfig.NvMInstruction(writingPriority = 10),
+                        "CodingParameters_NvDescriptor" to MemStackConfig.NvMInstruction(writingPriority = 7)
+                    ),
                     pimAppPatternInstances = collectPimAppPatternInstances(project, logger),
                     bulkNvDataDescriptors = collectBulkNvDataDescriptors(project)
                 )

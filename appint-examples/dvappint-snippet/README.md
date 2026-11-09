@@ -6,6 +6,8 @@ At the moment you could replace the following tasks:
 - ConfigureMemStack -> CustomScriptTask calling "configureMemStack" script task from the pai-project
 - ConfigureDiagStack -> CustomScriptTask calling "configureDiagStack" script task from the pai-project
 - ConfigureEcuStateManagement -> CustomScriptTask calling "configureEcuStateManagement" script task from the pai-project
+- ConfigureWatchdogManagement -> CustomScriptTask calling "configureWatchdogManagement" script task from the pai-project
+- PartitionMapping -> CustomScriptTask calling "mapSwcsToOsApps" script task from the pai-project
 
 Make sure that the task order is kept in place.
 

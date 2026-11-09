@@ -2,6 +2,7 @@ import com.vector.cfg.automation.scripting.api.IScriptCreationApi
 import com.vector.cfg.automation.scripting.api.IScriptFactory
 import com.vector.cfg.automation.scripting.api.IScriptTaskTypeApi.DV_PROJECT
 import com.vector.cfg.model.pai.api.transaction
+import com.vector.ecusdk.appint.diag.collectDiagnosticAppPatternInstances
 import com.vector.ecusdk.appint.diag.configureDiagnosticStack
 
 class ConfigureDiagnosticStack : IScriptFactory {
@@ -9,8 +10,10 @@ class ConfigureDiagnosticStack : IScriptFactory {
         creationApi.scriptTask("configureDiagStack", DV_PROJECT) {
             taskDescription("Execute the Diagnostic Top Down Service Configuration.")
             code {
+                val logger = LoggerAdapter(scriptLogger)
+                val matchingInstances = collectDiagnosticAppPatternInstances(project, logger)
                 transaction {
-                    configureDiagnosticStack(project, LoggerAdapter(scriptLogger))
+                    configureDiagnosticStack(project, logger, matchingInstances)
                 }
             }
         }
