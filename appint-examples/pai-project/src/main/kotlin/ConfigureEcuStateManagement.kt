@@ -3,7 +3,7 @@ import com.vector.cfg.automation.scripting.api.IScriptFactory
 import com.vector.cfg.automation.scripting.api.IScriptTaskTypeApi.DV_PROJECT
 import com.vector.cfg.model.pai.api.transaction
 import com.vector.ecusdk.appint.ecum.collectModeManagementAppPatternInstances
-import com.vector.ecusdk.appint.ecum.configureEcuModeManagement
+import com.vector.ecusdk.appint.ecum.configureEcuStateManagement
 
 class ConfigureEcuStateManagement : IScriptFactory {
     override fun createScript(creationApi: IScriptCreationApi) {
@@ -13,7 +13,7 @@ class ConfigureEcuStateManagement : IScriptFactory {
                 val logger = LoggerAdapter(scriptLogger)
                 val matchingInstances = collectModeManagementAppPatternInstances(project, logger)
                 transaction {
-                    configureEcuModeManagement(project, logger, matchingInstances)
+                    configureEcuStateManagement(project, logger, matchingInstances)
                 }
             }
         }

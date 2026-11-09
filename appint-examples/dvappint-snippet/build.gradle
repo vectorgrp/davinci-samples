@@ -4,11 +4,37 @@ plugins {
 	id 'com.vector.dvt.ci.vttintegration' version '22.+'
 }
 
+tasks.register("appIntMapSwcsToOsApps", CustomScriptTask) {
+    group = 'custom'
+    addCustomScriptTask 'mapSwcsToOsApps'
+    customScriptDirectories = ['../pai-project/build/libs']
+    inputWorkspace = dataMapping.outputZip
+    configurator = dvtWorkflow.configurator
+    bswPackage = dvtWorkflow.bswPackage
+}
+
+tasks.named("taskMappingConstraints"){
+    inputWorkspace = appIntMapSwcsToOsApps.outputZip
+}
+
+tasks.named("taskMapping"){
+    inputWorkspace = appIntMapSwcsToOsApps.outputZip
+}
+
+tasks.register("appIntConfigureWatchdogManagement", CustomScriptTask) {
+    group = 'custom'
+    addCustomScriptTask 'configureWatchdogManagement'
+    customScriptDirectories = ['../pai-project/build/libs']
+    inputWorkspace = taskMapping.outputZip
+    configurator = dvtWorkflow.configurator
+    bswPackage = dvtWorkflow.bswPackage
+}
+
 tasks.register("appIntConfigureEcuStateManagement", CustomScriptTask) {
     group = 'custom'
     addCustomScriptTask 'configureEcuStateManagement'
     customScriptDirectories = ['../pai-project/build/libs']
-    inputWorkspace = configureWatchdogManagement.outputZip
+    inputWorkspace = appIntConfigureWatchdogManagement.outputZip
     configurator = dvtWorkflow.configurator
     bswPackage = dvtWorkflow.bswPackage
 }
