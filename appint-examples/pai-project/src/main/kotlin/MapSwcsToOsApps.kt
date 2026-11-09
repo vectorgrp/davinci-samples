@@ -17,6 +17,7 @@ class MapSwcsToOsApps : IScriptFactory {
             code {
                 val logger = LoggerAdapter(scriptLogger)
                 transaction {
+                     //TODO replace with concrete elements matching your project
                     val systemApplicationPath = "/ActiveEcuC/Os/SystemApplication_OsCore0"
                     val systemApplication = project.mdfModel(AsrPath.create(systemApplicationPath, MIContainer::class.java))
                         ?: error("OS application '$systemApplicationPath' not found.")
